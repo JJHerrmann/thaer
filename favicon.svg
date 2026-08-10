@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Thaer neutral Vienna favicon</title>
+  <desc id="desc">The four empire colors meet beneath neutral fortified Vienna.</desc>
+  <!-- North Protestant blue, east Orthodox purple, south Islamic green, west Catholic gold. -->
+  <path fill="#163c8c" d="M0 0H512V256H0Z"/>
+  <path fill="#66238d" d="M256 0H512V512H256Z"/>
+  <path fill="#0d6035" d="M0 256H512V512H0Z"/>
+  <path fill="#e0a100" d="M0 0H256V512H0Z"/>
+  <!-- The city is deliberately neutral: solid black, no faction color enters it. -->
+  <path fill="#171717" d="M202 153L218 161L245 146L270 159L299 151L308 179L336 190L330 218L365 233L354 259L374 285L360 307L369 337L339 347L333 376L301 371L274 394L249 381L224 396L208 371L180 378L168 349L139 342L147 315L126 290L139 262L124 236L150 216L143 188L175 179L181 157Z"/>
+</svg>
