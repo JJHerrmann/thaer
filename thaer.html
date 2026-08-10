@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Thaer — Thaer</title>
+<style>
+  :root {
+    --ground: #eef0e8; --ink: #211f1a; --ink-soft: #4a4740; --accent: #8a6a24;
+    --panel-glass: rgba(255,255,255,0.55); --panel-border: rgba(33,31,26,0.10);
+    --nav-hover: rgba(33,31,26,0.06); --nav-active: rgba(138,106,36,0.14);
+    --callout-bg: rgba(138,106,36,0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #15171a; --ink: #e9e6db; --ink-soft: #b6b2a4; --accent: #c9a94a;
+      --panel-glass: rgba(18,20,23,0.58); --panel-border: rgba(255,255,255,0.08);
+      --nav-hover: rgba(255,255,255,0.06); --nav-active: rgba(201,169,74,0.16);
+      --callout-bg: rgba(201,169,74,0.10);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: Segoe UI, system-ui, sans-serif; }
+
+  .roadwork { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0; }
+  @media (prefers-color-scheme: dark) { .roadwork { opacity: 0.5; } }
+  .road { position: fixed; }
+  .road-n, .road-s { left: 20%; width: 34px; transform: translateX(-50%); }
+  .road-e, .road-w { top: 90%; height: 34px; transform: translateY(-50%); }
+  .road-n { top: 0; bottom: 10%; background: repeating-linear-gradient(90deg,
+    #003153 0 4px, transparent 4px 10px, #003153 10px 14px, transparent 14px 20px,
+    #003153 20px 24px, transparent 24px 30px, #003153 30px 34px, transparent 34px); }
+  .road-s { top: 90%; bottom: 0; background: repeating-linear-gradient(90deg,
+    #009000 0 4px, transparent 4px 10px, #009000 10px 14px, transparent 14px 20px,
+    #009000 20px 24px, transparent 24px 30px, #009000 30px 34px, transparent 34px); }
+  .road-e { left: 20%; right: 0; background: repeating-linear-gradient(180deg,
+    #66023C 0 4px, transparent 4px 10px, #66023C 10px 14px, transparent 14px 20px,
+    #66023C 20px 24px, transparent 24px 30px, #66023C 30px 34px, transparent 34px); }
+  .road-w { left: 0; right: 80%; background: repeating-linear-gradient(180deg,
+    #FCD116 0 4px, transparent 4px 10px, #FCD116 10px 14px, transparent 14px 20px,
+    #FCD116 20px 24px, transparent 24px 30px, #FCD116 30px 34px, transparent 34px); }
+  .medallion { position: fixed; top: 90%; left: 20%; width: 110px; height: 110px; transform: translate(-50%, -50%); }
+  .medallion svg { width: 100%; height: 100%; display: block; }
+
+  .page { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; }
+  .glass {
+    background: var(--panel-glass);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid var(--panel-border); border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+  .layout { display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 0; }
+  @media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
+  nav.side { padding: 1.25rem 0.9rem; border-right: 1px solid var(--panel-border); display: flex; flex-direction: column; gap: 0.2rem; }
+  @media (max-width: 760px) { nav.side { border-right: 0; border-bottom: 1px solid var(--panel-border); flex-direction: row; flex-wrap: wrap; } }
+  nav.side .eyebrow { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); padding: 0 0.6rem 0.4rem; }
+  nav.side a { display: block; padding: 0.45rem 0.6rem; border-radius: 6px; color: var(--ink); text-decoration: none; font-size: 0.86rem; }
+  nav.side a:hover { background: var(--nav-hover); }
+  nav.side a.active { background: var(--nav-active); font-weight: 600; }
+  nav.side a.external { color: var(--ink-soft); font-size: 0.8rem; }
+
+  main.content { padding: 1.75rem 2rem 2.5rem; min-width: 0; }
+  main.content h1 { font-family: Georgia, "Iowan Old Style", serif; font-size: 1.6rem; margin: 0 0 0.3rem; text-wrap: balance; }
+  main.content h2 { font-family: Georgia, "Iowan Old Style", serif; font-size: 1.2rem; margin: 1.6rem 0 0.5rem; border-bottom: 1px solid var(--panel-border); padding-bottom: 0.3rem; }
+  main.content h3 { font-family: Georgia, "Iowan Old Style", serif; font-size: 1.02rem; margin: 1.3rem 0 0.4rem; color: var(--accent); }
+  main.content p { color: var(--ink); font-size: 0.92rem; line-height: 1.65; margin: 0 0 0.85rem; max-width: 74ch; }
+  main.content ul, main.content ol { color: var(--ink); font-size: 0.92rem; line-height: 1.65; max-width: 74ch; padding-left: 1.3rem; margin: 0 0 0.85rem; }
+  main.content li { margin-bottom: 0.35rem; }
+  main.content a { color: var(--accent); }
+  main.content hr { border: 0; border-top: 1px solid var(--panel-border); margin: 1.75rem 0; }
+  main.content code { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.82em; background: var(--nav-hover); padding: 0.1em 0.35em; border-radius: 4px; }
+  main.content em { color: var(--ink-soft); }
+  main.content blockquote { margin: 0 0 0.85rem; padding: 0.4rem 0 0.4rem 0.9rem; border-left: 3px solid var(--panel-border); color: var(--ink-soft); font-size: 0.85rem; }
+  main.content blockquote p { margin: 0; }
+
+  .callout { background: var(--callout-bg); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: 6px; padding: 0.8rem 1rem; margin: 0 0 1rem; max-width: 74ch; }
+  .callout-title { font-weight: 600; font-size: 0.86rem; margin-bottom: 0.3rem; }
+  .callout-body { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.55; }
+  .callout-body p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+  <div class="roadwork" aria-hidden="true">
+    <div class="road road-n"></div>
+    <div class="road road-s"></div>
+    <div class="road road-e"></div>
+    <div class="road road-w"></div>
+    <div class="medallion">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-hidden="true">
+        <defs>
+          <clipPath id="north-sector"><path d="M512 512L0 0H1024Z"/></clipPath>
+          <clipPath id="east-sector"><path d="M512 512L1024 0V1024Z"/></clipPath>
+          <clipPath id="south-sector"><path d="M512 512L1024 1024H0Z"/></clipPath>
+          <clipPath id="west-sector"><path d="M512 512L0 1024V0Z"/></clipPath>
+          <path id="outer-wall" d="M460 314L480 326L512 306L546 323L580 312L593 351L627 366L620 401L667 421L654 453L687 481L674 512L690 546L661 567L668 609L627 623L620 662L580 656L546 691L513 674L480 691L457 658L419 668L401 625L362 619L370 579L335 548L350 512L332 477L365 454L357 415L399 401L407 365L448 351Z"/>
+        </defs>
+        <g fill="none" stroke="#1a1a1a" stroke-linecap="square" stroke-linejoin="miter">
+          <use href="#outer-wall" stroke="#003153" stroke-width="14" clip-path="url(#north-sector)"/>
+          <use href="#outer-wall" stroke="#66023C" stroke-width="14" clip-path="url(#east-sector)"/>
+          <use href="#outer-wall" stroke="#009000" stroke-width="14" clip-path="url(#south-sector)"/>
+          <use href="#outer-wall" stroke="#FCD116" stroke-width="14" clip-path="url(#west-sector)"/>
+          <path fill="#cccccc" stroke-width="7" d="M465 340L482 351L512 333L542 348L567 339L578 372L607 385L598 414L642 432L629 458L660 484L648 512L663 542L636 561L642 598L607 609L598 643L568 637L542 666L513 651L483 666L463 638L431 647L415 611L382 603L390 574L358 545L373 512L356 482L388 459L381 427L416 415L425 383L456 372Z"/>
+          <path stroke-width="18" d="M486 320H538M486 704H538M320 486V538M704 486V538"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="page">
+    <div class="layout glass">
+      <nav class="side">
+        <span class="eyebrow">Thaer</span>
+        <a href="index.html" class="">Empire Map</a>
+        <a href="gift-i.html" class="">Gift I</a>
+        <a href="thaer.html" class="active">Thaer</a>
+        <span class="eyebrow" style="margin-top:0.6rem;">Elsewhere</span>
+        <a href="https://github.com/JJHerrmann/thaer" class="external" target="_blank" rel="noopener">Source on GitHub &#8599;</a>
+      </nav>
+      <main class="content">
+<div class="callout callout-note"><div class="callout-title">How this doc was built</div><div class="callout-body"><p>Compiled from ChatGPT project history (GPT Logs MCP) spanning 2023-07-19 to 2025-12-05, surfaced while chasing down the origin of the <a href="gift-i.html">Gift I</a> / &quot;Paragon of the Horn&quot; character. Every claim below is attributed to a source conversation — verify against the original before treating anything here as locked canon, same standard applied to the Bloodline provenance doc and The Rook's canon file. There is at least one unresolved internal contradiction (see Open Threads) — this is a working reference, not settled lore.</p>
+</div></div>
+<h1>Thaer</h1>
+<h2>Current Canon Snapshot</h2>
+<p><strong>Elevator hook:</strong> An alternate Earth that already diverged from ours once — then, in 1705, it happened again, all at once, everywhere.</p>
+<p>Thaer is an alternate Earth with its own pre-existing divergence from real-world history: for reasons not yet specified, the Atlantic and Pacific colonization of the New World never happened. The Americas, Oceania, and Australia have indigenous communities, but as of the 1700s they remain unknown to Afro-Eurasian civilization — &quot;not a known part of the world&quot; from that perspective.</p>
+<p><em>Source: Build World Fantasy Sci-Fi Cyberpunk 🌌, 2023-07-22</em></p>
+<h3>The Yawning (1705)</h3>
+<p>In 1705, portals opened across the known world over the course of roughly <strong>seventy seconds</strong>, depositing entire communities, cultures, and species of sentient non-human D&amp;D-style races (elves, dwarves, tieflings, etc.) across Africa, Eurasia, the Indian Subcontinent, Oceania, Australia, and the Middle East.</p>
+<p><em>Source: Religious Shift, Western Exploration, 2023-07-22</em></p>
+<p>The named event is <strong>&quot;The Yawning.&quot;</strong> Mechanically, it's explained as a gamma-ray burst (GRB) striking a sister-Earth called <strong>Raeth</strong> — the world where these D&amp;D races originated — which collapsed the divergence between Raeth and Thaer, spilling Raeth's population across.</p>
+<p><em>Source: Build World Fantasy Sci-Fi Cyberpunk 🌌, 2023-07-22</em></p>
+<p>Notably, <strong>the humans of Raeth did not transfer.</strong> They were either left behind entirely, absorbed into &quot;companion personas&quot; of humans already living on Thaer, or diverted to some other destination — this was still being worked out rather than settled.</p>
+<p><em>Source: Uniting Protestant Powers, 2023-07-20</em></p>
+<h3>Political aftermath: religious empires</h3>
+<p>The Imperial Age does not survive the Yawning intact. Power reconsolidates along religious lines instead of national ones:</p>
+<ul>
+<li>The Catholic and Orthodox Churches each transform into full <strong>Empires of constituent kingdoms</strong> — not just religious institutions, but political-military powers.</li>
+<li>The Islamic Caliphate unites its various Islamic kingdoms into one bloc.</li>
+<li>The Protestants form a defensive confederacy to protect their interests in Northern Europe.</li>
+</ul>
+<p><em>Source: Build World Fantasy Sci-Fi Cyberpunk 🌌, 2023-07-22</em></p>
+<p>Open questions being actively worked at this stage: how each D&amp;D race's own pre-existing religious traditions (several D&amp;D races have racially-coded faiths) interact with the four Thaer-native religious blocs, and how much proselytization occurs between them.</p>
+<p><em>Source: Uniting Protestant Powers, 2023-07-20</em></p>
+<p>This is the political substrate <a href="gift-i.html">Gift I</a>'s story runs on — the Catholic Church being a literal Empire with standing armies is <em>why</em> a role like &quot;War-Papa&quot; (a wartime supreme commander the Papal State activates in crisis) can exist as a real career track for a Paladin.</p>
+<p><strong>Vienna</strong> is recognized as a free, neutral city — the point where all four religious empires' spheres of control converge without any one claiming it.</p>
+<p><em>Source: Disney-inspired D&amp;D Artifacts, 2023-07-17</em></p>
+<h3>Origin: this is a campaign setting, not just a novel setting</h3>
+<p>The earliest recovered session (2023-07-17, five days before the &quot;Build World&quot; session above) is where the divergence premise and the four-religious-empire structure were <em>first</em> established — as the backdrop for an actual tabletop campaign, not the novel-prose worldbuilding that came later. Same divergence (no New World colonization), same four powers (Islam, Protestantism, Catholicism, Orthodoxy). This confirms Thaer began life as the DM'd game world, and the prose/novel-adjacent Yawning material is a later layer built on top of it.</p>
+<p><em>Source: Disney-inspired D&amp;D Artifacts, 2023-07-17</em></p>
+<h3>The campaign organization: R.O.D.E. / The Aegis of Equilibrium</h3>
+<p>The party's in-fiction employer, workshopped across several names before landing on <strong>The Aegis of Equilibrium (A.E.)</strong> — an SCP-Foundation-adjacent (deliberately &quot;five steps off&quot; to stay legally distinct) organization that recruits agents to secure, contain, and protect the world from dangerous magical artifacts. Players start as <strong>Junior Warden Field Agents.</strong></p>
+<p><strong>Rank ladder:</strong></p>
+<ol>
+<li>Council of Equilibrium (top — strategic direction, threat oversight)</li>
+<li>Master Wardens (team leads, mentors, occasional Council liaisons)</li>
+<li>Senior Wardens (lead missions, train Junior Wardens)</li>
+<li>Junior Wardens (new recruits — starting rank for players)</li>
+</ol>
+<p><strong>Roles within rank</strong> (fantasy-flavored, not tied to class): <strong>Arcanists</strong> (wizards/sages — artifact research), <strong>Rangers</strong> (field agents — retrieval/combat), <strong>Emissaries</strong> (bards/clerics/rogues — negotiation, cleanup, local politics), <strong>Healers</strong> (clerics/druids — party upkeep).</p>
+<p>The A.E. is organized into regional chapters (each under a Council member) operating out of hidden strongholds that double as artifact vaults, which also allows for internal factional conflict (destroy vs. study vs. weaponize the artifacts) as an ongoing background tension.</p>
+<p><em>Source: Disney-inspired D&amp;D Artifacts, 2023-07-17</em></p>
+<p>This is a <strong>second, intersecting rank hierarchy alongside <a href="gift-i.html">Gift I</a>'s Church-militant track</strong> — worth deciding whether Gift I operates inside the A.E. himself (Paladin-as-Ranger/Field-Agent, with his Church rank as a separate, parallel thread) or whether the A.E. is a different party's frame entirely. Not yet resolved either way.</p>
+<h3>Regional fairy-tale artifact quests</h3>
+<p>The campaign's mission structure: real-world fairy tales relocated to specific Thaer regions and paired with a bespoke magic artifact, each with its own villain and moral complication. Confirmed from the source session:</p>
+<ul>
+<li><strong>The Midas Owl</strong> — a clockwork owl with King Midas's transmutation power. Set as a <em>Beauty and the Beast</em> riff: Gaston and LeFou were secretly using it on village children and blaming the disappearances on the castle's &quot;Beast&quot; to incite the village to revolt.</li>
+<li><strong>The Zephyr Mariner</strong> (reworked from a literal Aladdin's-carpet idea) — ethereal sails that let any vessel fly; misused by a corrupt vizier for covert raids on distant kingdoms.</li>
+<li><strong>The Siren's Whisper</strong> (reworked from Ariel's shell) — a conch shell that amplifies/distorts voice into a captivating, doom-luring song; wielded by a sea witch sinking ships.</li>
+<li><strong>The Golden Spindle</strong> (reworked from Rapunzel's lock) — a spinning wheel weaving threads of life/healing; hoarded by an ageless crone to monopolize both youth and local healing.</li>
+<li><strong>The Darkened Looking Glass</strong> (reworked from Snow White's mirror) — shows people at their worst, wielded by a jealous queen to undermine rivals.</li>
+<li><strong>The Heart of the Green</strong> (reworked from Pocahontas's spirit tree) — an ancient runestone/heart-of-nature, threatened by a governor who wants the forest razed for resources.</li>
+<li><strong>Sigil of Saint Felix</strong> (final version of a Princess-and-the-Frog-adjacent slot) — a silver medallion granting fate-manipulation with a monkey's-paw cost (every miracle causes an equal misfortune elsewhere); used by an ambitious magistrate. This slot went through two rewrites — an initial Gris-Gris-talisman/Vodou-coded version was deliberately discarded and rebuilt around a Catholic-saint framing specifically to avoid appropriative use of a real living tradition's sacred items, in favor of a culturally-matched (Euro-Christian) analog instead. Worth keeping as the standing approach for any future region-specific artifact: match the artifact's spiritual framework to the culture it's set in rather than reskinning a real closed practice.</li>
+</ul>
+<p><em>Source: Disney-inspired D&amp;D Artifacts, 2023-07-17</em></p>
+<p><strong>Not yet located</strong>: the user recalls an <strong>&quot;Aladdin in Siberia&quot;</strong> quest built around a <strong>Helm of the Golden Horde</strong>, distinct from the Zephyr Mariner above. A separate session (<code>Meso-Roman Civilization Blend - 2023-09-22.md</code>) does develop real Eastern-Siberian/steppe geography and a Turkic-flavored dwarf culture (&quot;Sil'K'uhlam,&quot; the Choktak region) that would be a plausible setting for it, but the Helm artifact itself wasn't found in what's been searched — likely a later or separate session not yet located.</p>
+<hr />
+<h2>Open Threads / Unresolved</h2>
+<ul>
+<li><strong>Timeline contradiction, unresolved.</strong> The 2023 Thaer material above is explicit and consistent: D&amp;D races arrive in <strong>1705</strong> via the Yawning. But the 2025-12-05 &quot;Paragon of the Horn&quot; session — while actively building <a href="gift-i.html">Gift I</a>'s world — casually discusses D&amp;D races settling the world by <strong>200 BC</strong>, arriving as early as <strong>9600 BCE</strong>, with the Roman Republic and Hellenistic kingdoms still present but &quot;tweaked&quot; by the alt-history. That's a fundamentally different, much deeper-history arrival than 1705. These may be: (a) two incompatible drafts of the same idea, with the 2025 session representing a pivot away from the 1705 version; (b) a deliberate two-layer history (an ancient arrival <em>and</em> a second 1705 event); or (c) the 2025 session drifting into generic alt-history brainstorming without deliberately invoking Thaer-specific canon. Needs an author decision before <a href="gift-i.html">Gift I</a>'s setting can be treated as fixed.
+<blockquote>
+<p>Sources: <code>DnD Victorian SCP Campaign - 2023-07-23.md</code> (1705/Yawning) vs. <code>Paragon of the Horn - 2025-12-05.md</code> chunk 111 (9600 BCE/200 BC)</p>
+</blockquote>
+</li>
+<li><strong>Possibly-related but unconfirmed parallel material</strong>: <code>Dwarven Evolutionary Pathways - 2025-02-13.md</code> and <code>RPG Earth Twist Idea - 2025-03-12.md</code> (both 2025-Q1) explore a very similar &quot;D&amp;D races fused into real-world history&quot; premise (Founding Fathers who turn out to be Elves/Dwarves/Gnomes; human-led vs. halfling-led nations) — but neither mentions &quot;Thaer&quot; by name. Could be earlier ideation for the same setting, a distinct unnamed elseworld, or unrelated brainstorming that happens to rhyme. Not folded into canon above; flagged for review.</li>
+<li><strong>Mechanism for the divergence prior to 1705</strong> (why the Atlantic/Pacific were never crossed) isn't explained in what's been recovered — may exist in an unindexed session.</li>
+<li><strong>Race-specific religious integration</strong> (how tiefling, elf, dwarf, etc. faiths interact with the four human religious blocs) was mid-discussion, not resolved.</li>
+<li><strong>Helm of the Golden Horde / &quot;Aladdin in Siberia&quot; quest</strong> — recalled by the author, not yet located in searchable logs. See note above.</li>
+<li><strong>A.E. rank vs. Church rank</strong> — whether <a href="gift-i.html">Gift I</a> operates inside the Aegis of Equilibrium's Warden hierarchy himself, or whether that's a separate party/campaign frame from his Church-militant arc, is undecided. Matters directly for the LitRPG progression-system design (two intersecting institutional ladders vs. one).</li>
+</ul>
+<h2>Related</h2>
+<ul>
+<li><a href="gift-i.html">Gift I</a> — Paladin of Eloiheim, groomed as War-Papa within the Papal State; the character this setting doc was compiled to support.</li>
+<li>Bloodline: Spirits of the Smokies and The Rook / The Argonaut (Mythic Comics) are separate properties, not part of Thaer continuity.</li>
+</ul>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

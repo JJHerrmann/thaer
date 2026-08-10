@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Gift I — "Paragon of the Horn" — Thaer</title>
+<style>
+  :root {
+    --ground: #eef0e8; --ink: #211f1a; --ink-soft: #4a4740; --accent: #8a6a24;
+    --panel-glass: rgba(255,255,255,0.55); --panel-border: rgba(33,31,26,0.10);
+    --nav-hover: rgba(33,31,26,0.06); --nav-active: rgba(138,106,36,0.14);
+    --callout-bg: rgba(138,106,36,0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #15171a; --ink: #e9e6db; --ink-soft: #b6b2a4; --accent: #c9a94a;
+      --panel-glass: rgba(18,20,23,0.58); --panel-border: rgba(255,255,255,0.08);
+      --nav-hover: rgba(255,255,255,0.06); --nav-active: rgba(201,169,74,0.16);
+      --callout-bg: rgba(201,169,74,0.10);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: Segoe UI, system-ui, sans-serif; }
+
+  .roadwork { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0; }
+  @media (prefers-color-scheme: dark) { .roadwork { opacity: 0.5; } }
+  .road { position: fixed; }
+  .road-n, .road-s { left: 20%; width: 34px; transform: translateX(-50%); }
+  .road-e, .road-w { top: 90%; height: 34px; transform: translateY(-50%); }
+  .road-n { top: 0; bottom: 10%; background: repeating-linear-gradient(90deg,
+    #003153 0 4px, transparent 4px 10px, #003153 10px 14px, transparent 14px 20px,
+    #003153 20px 24px, transparent 24px 30px, #003153 30px 34px, transparent 34px); }
+  .road-s { top: 90%; bottom: 0; background: repeating-linear-gradient(90deg,
+    #009000 0 4px, transparent 4px 10px, #009000 10px 14px, transparent 14px 20px,
+    #009000 20px 24px, transparent 24px 30px, #009000 30px 34px, transparent 34px); }
+  .road-e { left: 20%; right: 0; background: repeating-linear-gradient(180deg,
+    #66023C 0 4px, transparent 4px 10px, #66023C 10px 14px, transparent 14px 20px,
+    #66023C 20px 24px, transparent 24px 30px, #66023C 30px 34px, transparent 34px); }
+  .road-w { left: 0; right: 80%; background: repeating-linear-gradient(180deg,
+    #FCD116 0 4px, transparent 4px 10px, #FCD116 10px 14px, transparent 14px 20px,
+    #FCD116 20px 24px, transparent 24px 30px, #FCD116 30px 34px, transparent 34px); }
+  .medallion { position: fixed; top: 90%; left: 20%; width: 110px; height: 110px; transform: translate(-50%, -50%); }
+  .medallion svg { width: 100%; height: 100%; display: block; }
+
+  .page { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; }
+  .glass {
+    background: var(--panel-glass);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid var(--panel-border); border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+  .layout { display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 0; }
+  @media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
+  nav.side { padding: 1.25rem 0.9rem; border-right: 1px solid var(--panel-border); display: flex; flex-direction: column; gap: 0.2rem; }
+  @media (max-width: 760px) { nav.side { border-right: 0; border-bottom: 1px solid var(--panel-border); flex-direction: row; flex-wrap: wrap; } }
+  nav.side .eyebrow { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); padding: 0 0.6rem 0.4rem; }
+  nav.side a { display: block; padding: 0.45rem 0.6rem; border-radius: 6px; color: var(--ink); text-decoration: none; font-size: 0.86rem; }
+  nav.side a:hover { background: var(--nav-hover); }
+  nav.side a.active { background: var(--nav-active); font-weight: 600; }
+  nav.side a.external { color: var(--ink-soft); font-size: 0.8rem; }
+
+  main.content { padding: 1.75rem 2rem 2.5rem; min-width: 0; }
+  main.content h1 { font-family: Georgia, "Iowan Old Style", serif; font-size: 1.6rem; margin: 0 0 0.3rem; text-wrap: balance; }
+  main.content h2 { font-family: Georgia, "Iowan Old Style", serif; font-size: 1.2rem; margin: 1.6rem 0 0.5rem; border-bottom: 1px solid var(--panel-border); padding-bottom: 0.3rem; }
+  main.content h3 { font-family: Georgia, "Iowan Old Style", serif; font-size: 1.02rem; margin: 1.3rem 0 0.4rem; color: var(--accent); }
+  main.content p { color: var(--ink); font-size: 0.92rem; line-height: 1.65; margin: 0 0 0.85rem; max-width: 74ch; }
+  main.content ul, main.content ol { color: var(--ink); font-size: 0.92rem; line-height: 1.65; max-width: 74ch; padding-left: 1.3rem; margin: 0 0 0.85rem; }
+  main.content li { margin-bottom: 0.35rem; }
+  main.content a { color: var(--accent); }
+  main.content hr { border: 0; border-top: 1px solid var(--panel-border); margin: 1.75rem 0; }
+  main.content code { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.82em; background: var(--nav-hover); padding: 0.1em 0.35em; border-radius: 4px; }
+  main.content em { color: var(--ink-soft); }
+  main.content blockquote { margin: 0 0 0.85rem; padding: 0.4rem 0 0.4rem 0.9rem; border-left: 3px solid var(--panel-border); color: var(--ink-soft); font-size: 0.85rem; }
+  main.content blockquote p { margin: 0; }
+
+  .callout { background: var(--callout-bg); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: 6px; padding: 0.8rem 1rem; margin: 0 0 1rem; max-width: 74ch; }
+  .callout-title { font-weight: 600; font-size: 0.86rem; margin-bottom: 0.3rem; }
+  .callout-body { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.55; }
+  .callout-body p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+  <div class="roadwork" aria-hidden="true">
+    <div class="road road-n"></div>
+    <div class="road road-s"></div>
+    <div class="road road-e"></div>
+    <div class="road road-w"></div>
+    <div class="medallion">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-hidden="true">
+        <defs>
+          <clipPath id="north-sector"><path d="M512 512L0 0H1024Z"/></clipPath>
+          <clipPath id="east-sector"><path d="M512 512L1024 0V1024Z"/></clipPath>
+          <clipPath id="south-sector"><path d="M512 512L1024 1024H0Z"/></clipPath>
+          <clipPath id="west-sector"><path d="M512 512L0 1024V0Z"/></clipPath>
+          <path id="outer-wall" d="M460 314L480 326L512 306L546 323L580 312L593 351L627 366L620 401L667 421L654 453L687 481L674 512L690 546L661 567L668 609L627 623L620 662L580 656L546 691L513 674L480 691L457 658L419 668L401 625L362 619L370 579L335 548L350 512L332 477L365 454L357 415L399 401L407 365L448 351Z"/>
+        </defs>
+        <g fill="none" stroke="#1a1a1a" stroke-linecap="square" stroke-linejoin="miter">
+          <use href="#outer-wall" stroke="#003153" stroke-width="14" clip-path="url(#north-sector)"/>
+          <use href="#outer-wall" stroke="#66023C" stroke-width="14" clip-path="url(#east-sector)"/>
+          <use href="#outer-wall" stroke="#009000" stroke-width="14" clip-path="url(#south-sector)"/>
+          <use href="#outer-wall" stroke="#FCD116" stroke-width="14" clip-path="url(#west-sector)"/>
+          <path fill="#cccccc" stroke-width="7" d="M465 340L482 351L512 333L542 348L567 339L578 372L607 385L598 414L642 432L629 458L660 484L648 512L663 542L636 561L642 598L607 609L598 643L568 637L542 666L513 651L483 666L463 638L431 647L415 611L382 603L390 574L358 545L373 512L356 482L388 459L381 427L416 415L425 383L456 372Z"/>
+          <path stroke-width="18" d="M486 320H538M486 704H538M320 486V538M704 486V538"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="page">
+    <div class="layout glass">
+      <nav class="side">
+        <span class="eyebrow">Thaer</span>
+        <a href="index.html" class="">Empire Map</a>
+        <a href="gift-i.html" class="active">Gift I</a>
+        <a href="thaer.html" class="">Thaer</a>
+        <span class="eyebrow" style="margin-top:0.6rem;">Elsewhere</span>
+        <a href="https://github.com/JJHerrmann/thaer" class="external" target="_blank" rel="noopener">Source on GitHub &#8599;</a>
+      </nav>
+      <main class="content">
+<div class="callout callout-note"><div class="callout-title">How this doc was built</div><div class="callout-body"><p>Compiled from ChatGPT project history (GPT Logs MCP, session &quot;Paragon of the Horn,&quot; 2025-12-05) plus a HeroForge figurine the user supplied as visual reference in the same 2026-08-10 chat that prompted this doc. Every claim below is attributed to its source — verify against the original conversation before treating anything here as locked canon, same standard applied to the Bloodline provenance doc and The Rook's canon file. Several elements below are explicitly <strong>unresolved drafts</strong>, not decisions — see Open Threads.</p>
+</div></div>
+<h1>Gift I — &quot;Paragon of the Horn&quot;</h1>
+<h2>Current Canon Snapshot</h2>
+<p><strong>Elevator hook:</strong> A child of the rebel bloodline, sworn to the Throne he was born to defy.</p>
+<p>Gift I is a Luciferian tiefling — an ancestor made a pact with Lucifer (pre-Fall or post-Fall undecided), and that bloodline marks every descendant with horns, luminous or shadow-tinged eyes, and a subtle pressure in the air when they're emotional. Unusually, <strong>he was raised passing as fully human</strong>; his tiefling features didn't manifest until he was already an adult and already ordained a Paladin.</p>
+<p><em>Source: Paragon of the Horn, 2025-12-05</em></p>
+<p>He is a <strong>Paladin of Eloiheim</strong> — &quot;the One,&quot; the Source, the fountainhead of holiness. This is deliberate, not ironic: a child of the rebel star pledging himself to the Throne, framed as an act of reconciliation (&quot;nothing born can be beyond the Light's reach&quot;), not repentance for existing.</p>
+<p>Politically, he's being groomed within the Church-militant hierarchy of the <strong>Papal State</strong> (a religious Empire — see <a href="thaer.html">Thaer</a>) toward <strong>War-Papa</strong>: the wartime supreme commander the Papal State activates if it needs to go to war. He is close to that ascension when a battlefield catastrophe — and the doubt it produces — triggers his previously-dormant tiefling bloodline, manifesting his horns publicly for the first time.</p>
+<p><em>Source: Paragon of the Horn, 2025-12-05</em></p>
+<h3>The Horn Sacrifice</h3>
+<p>His signature beat, in two acts:</p>
+<ul>
+<li><strong>Horn One — The Parade Cut.</strong> Public, deliberate, performed in formation in front of the Church. Addressed to the <em>institution</em>, not to God: a statement that the Church no longer holds power over his standing before Eloiheim.</li>
+<li><strong>Horn Two — The Jerusalem Cut.</strong> Private, at a temple in Jerusalem, alone. Addressed to God: an offering, not a rejection — declaring the <em>agency</em> to define what his bloodline means rather than disowning it.</li>
+</ul>
+<p>He goes on to reach &quot;Level 20 Paladin&quot; in myth-terms: leading without needing validation, confronting evil without fear of resembling it, carrying both Light and Shadow without apology.</p>
+<p><em>Source: Paragon of the Horn, 2025-12-05</em></p>
+<h3>Visual reference</h3>
+<p>A HeroForge figurine titled <strong>&quot;Gift I&quot;</strong> — bald, heavily bearded, human-presenting man in ornate white-and-gold plate armor, a red heater shield trimmed in gold, a ram-horn/bone shoulder ornament (foreshadowing the latent tiefling features), and a large two-handed sword planted point-down. Consistent with the &quot;reads as fully human until manifestation&quot; design intent above.</p>
+<p><em>Source: HeroForge figurine, user-supplied 2026-08-10</em></p>
+<hr />
+<h2>Working titles vs. confirmed name</h2>
+<ul>
+<li><strong>&quot;Paragon of the Horn&quot;</strong> — the order/archetype title for the tiefling-paladin concept generally; confirmed IP-clean (Tiefling and Paladin are SRD/OGL-safe, the title itself is original coined language, no WotC/Hasbro conflict as long as no verbatim rules text or Forgotten Realms-specific IP is used).</li>
+<li><strong>&quot;War-Papa&quot;</strong> — his political/military title within the Papal State, not a personal name.</li>
+<li><strong>&quot;Gift I&quot;</strong> — his actual regnal/papal name, per the HeroForge figurine's title. This has <strong>not</strong> been located anywhere in the searchable GPT log text despite multiple targeted searches (including for &quot;Pope Gift,&quot; Latin/Greek gift-root name candidates like Donatus/Theodore/Dorotheus, and broad full-corpus search). It may be from a session outside this archive, or simply wasn't captured well by semantic search. Treat as author-confirmed via the physical figurine regardless of the missing paper trail.</li>
+<li><strong>&quot;Tobiaus of Kmet&quot;</strong> — a working alias explored for a hidden/exile-period identity (assigned name, &quot;safe name,&quot; his old name reduced to rumor). Explicitly floated as one option among several, not locked.</li>
+</ul>
+<h2>Open Threads / Unresolved</h2>
+<ul>
+<li><strong>His birth name and Church-given name were mid-discussion, not finalized.</strong> The session was actively generating Hebrew-rooted birth-name candidates and Greek-form Church-name candidates when the recovered material cuts off.</li>
+<li><strong>Setting timeline contradiction</strong> — this same session casually places D&amp;D races in Thaer's history as early as 9600 BCE / settled by 200 BC, which conflicts with the separately-documented 1705 &quot;Yawning&quot; arrival event. See <a href="thaer.html">Thaer</a> Open Threads — needs resolving before Gift I's backstory timeline is fixed.</li>
+<li><strong>Protagonist arc axis not chosen.</strong> Three throughlines were proposed and left open:
+<ul>
+<li>(A) <em>Redemption but Not Self-Destruction</em> — reclaiming narrative agency over the bloodline (&quot;my bloodline bows to my choices&quot;).</li>
+<li>(B) <em>The Heretic Who Was Right</em> — Church politics as antagonist; he becomes a prophetic figure exposing institutional corruption/cowardice.</li>
+<li>(C) <em>The Saint of the Broken Lineage</em> — becomes a mythic hero for the outcast/cursed-blooded, rewriting cultural memory.</li>
+</ul>
+</li>
+<li><strong>Party composition not locked</strong> — two different rosters were floated in the same session and never converged:
+<ul>
+<li>Early version: Tiefling Paladin (him) + Gnome Warlock(?) + Human Cleric assigned to him.</li>
+<li>Later revision: Tiefling Paladin + Tiefling Warlock + Halfling Artificer + Elvish Rogue, plus a found Goblin Cleric/Prophet and her little brother (a Goblin Ranger).</li>
+</ul>
+</li>
+<li><strong>&quot;Thaer&quot; was initially misremembered by the author as a deity name</strong> in the 2026-08-10 session that produced this doc — resolved to be the setting itself; the actual deity is <strong>Eloiheim</strong>. Noted here in case the confusion recurs.</li>
+</ul>
+<h2>Related</h2>
+<ul>
+<li><a href="thaer.html">Thaer</a> — the setting: alternate Earth, the 1705 Yawning event, post-event religious-empire political structure. Same open contradiction on arrival timeline applies to both docs.</li>
+<li>Next planned step (as of 2026-08-10): porting Gift I into a progression-fantasy / LitRPG mechanical structure — not yet started, no game-system material exists for him yet.</li>
+</ul>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>
