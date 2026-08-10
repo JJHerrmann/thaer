@@ -4,7 +4,8 @@ subtype: character
 property: Thaer
 character: "Gift I"
 aliases: ["Paragon of the Horn", "War-Papa", "Tobiaus of Kmet"]
-race: "Tiefling (Luciferian bloodline)"
+culture: "Levantine"
+race: "Human (presenting) → Luciferian Tiefling (post-manifestation)"
 class: "Paladin"
 deity: "Eloiheim"
 affiliation: "Papal State (Church-militant hierarchy)"
@@ -69,9 +70,9 @@ A HeroForge figurine titled **"Gift I"** — bald, heavily bearded, human-presen
   - (A) *Redemption but Not Self-Destruction* — reclaiming narrative agency over the bloodline ("my bloodline bows to my choices").
   - (B) *The Heretic Who Was Right* — Church politics as antagonist; he becomes a prophetic figure exposing institutional corruption/cowardice.
   - (C) *The Saint of the Broken Lineage* — becomes a mythic hero for the outcast/cursed-blooded, rewriting cultural memory.
-- **Party composition not locked** — two different rosters were floated in the same session and never converged:
-  - Early version: Tiefling Paladin (him) + Gnome Warlock(?) + Human Cleric assigned to him.
-  - Later revision: Tiefling Paladin + Tiefling Warlock + Halfling Artificer + Elvish Rogue, plus a found Goblin Cleric/Prophet and her little brother (a Goblin Ranger).
+- **Party composition — confirmed 2026-08-10, supersedes the two GPT-log-era rosters below.** Six-member party, each pairing a fantasy race with a real-world culture (consistent with Thaer's post-Yawning premise of D&D races settling into specific human regions): a Russian Goblin, a Scandinavian Bugbear, an English Elf, Gift I himself (Levantine — Human-presenting, later Luciferian Tiefling), a French Human, and a Hindi/Sikh Dwarf. Names, classes, deities, and affiliations for the other five are not yet set.
+  - Superseded early version: Tiefling Paladin (him) + Gnome Warlock(?) + Human Cleric assigned to him.
+  - Superseded later revision: Tiefling Paladin + Tiefling Warlock + Halfling Artificer + Elvish Rogue, plus a found Goblin Cleric/Prophet and her little brother (a Goblin Ranger).
 - **"Thaer" was initially misremembered by the author as a deity name** in the 2026-08-10 session that produced this doc — resolved to be the setting itself; the actual deity is **Eloiheim**. Noted here in case the confusion recurs.
 
 ## Related
