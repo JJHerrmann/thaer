@@ -21,31 +21,31 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--ground); color: var(--ink); font-family: Segoe UI, system-ui, sans-serif; }
 
-  /* Vienna stays a fixed pixel size at viewport center; the four roads
-     stretch independently to whichever edge is nearest, so the motif holds
+  /* Vienna stays a fixed pixel size, anchored 20% from the left and 10%
+     from the bottom of the viewport; the four roads stretch independently
+     from that anchor to whichever edge they face, so the motif holds
      together at any window size instead of scaling as one flat image. */
   .roadwork { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0; }
   @media (prefers-color-scheme: dark) { .roadwork { opacity: 0.5; } }
 
   .road { position: fixed; }
-  .road-stripes-v { background-repeat: no-repeat; }
-  .road-n, .road-s { left: 50%; width: 34px; transform: translateX(-50%); }
-  .road-e, .road-w { top: 50%; height: 34px; transform: translateY(-50%); }
-  .road-n { top: 0; bottom: 50%; background: repeating-linear-gradient(90deg,
+  .road-n, .road-s { left: 20%; width: 34px; transform: translateX(-50%); }
+  .road-e, .road-w { top: 90%; height: 34px; transform: translateY(-50%); }
+  .road-n { top: 0; bottom: 10%; background: repeating-linear-gradient(90deg,
     #003153 0 4px, transparent 4px 10px, #003153 10px 14px, transparent 14px 20px,
     #003153 20px 24px, transparent 24px 30px, #003153 30px 34px, transparent 34px); }
-  .road-s { top: 50%; bottom: 0; background: repeating-linear-gradient(90deg,
+  .road-s { top: 90%; bottom: 0; background: repeating-linear-gradient(90deg,
     #009000 0 4px, transparent 4px 10px, #009000 10px 14px, transparent 14px 20px,
     #009000 20px 24px, transparent 24px 30px, #009000 30px 34px, transparent 34px); }
-  .road-e { left: 50%; right: 0; background: repeating-linear-gradient(180deg,
+  .road-e { left: 20%; right: 0; background: repeating-linear-gradient(180deg,
     #66023C 0 4px, transparent 4px 10px, #66023C 10px 14px, transparent 14px 20px,
     #66023C 20px 24px, transparent 24px 30px, #66023C 30px 34px, transparent 34px); }
-  .road-w { left: 0; right: 50%; background: repeating-linear-gradient(180deg,
+  .road-w { left: 0; right: 80%; background: repeating-linear-gradient(180deg,
     #FCD116 0 4px, transparent 4px 10px, #FCD116 10px 14px, transparent 14px 20px,
     #FCD116 20px 24px, transparent 24px 30px, #FCD116 30px 34px, transparent 34px); }
 
   .medallion {
-    position: fixed; top: 50%; left: 50%; width: 110px; height: 110px;
+    position: fixed; top: 90%; left: 20%; width: 110px; height: 110px;
     transform: translate(-50%, -50%);
   }
   .medallion svg { width: 100%; height: 100%; display: block; }
