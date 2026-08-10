@@ -107,6 +107,18 @@ The campaign's mission structure: real-world fairy tales relocated to specific T
 
 ---
 
+### The Warden's Ledger (character system terms)
+
+For the LitRPG mechanical layer: attribute names stay plain English (Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma — these are generic words, not anyone's IP, no reason to rename them). Everything else is renamed to keep Thaer's system recognizable to a tabletop-literate reader without reusing anyone's exact trademarked terms:
+
+- **Vitality** — a character's pool of endurance before they're taken out of a fight (the familiar "how much can you take" number).
+- **Guard** — how hard a character is to actually land a hit on.
+- **Warden rank** (Junior/Senior/Master/Council) stays a *separate* track from character level — the political/employment ladder inside the Aegis of Equilibrium, not a measure of combat capability. See the Rank ladder above.
+
+Class-specific features and spells are renamed per character, individually flavored to that character's culture rather than reusing one generic reskin pass — see each party member's own Level 1 Ledger section for their specific terms.
+
+*Source: author-designed 2026-08-10, extending the Aegis Ledger concept discussed alongside [[Gift I]].*
+
 ## Open Threads / Unresolved
 
 - **Timeline contradiction, unresolved.** The 2023 Thaer material above is explicit and consistent: D&D races arrive in **1705** via the Yawning. But the 2025-12-05 "Paragon of the Horn" session — while actively building [[Gift I]]'s world — casually discusses D&D races settling the world by **200 BC**, arriving as early as **9600 BCE**, with the Roman Republic and Hellenistic kingdoms still present but "tweaked" by the alt-history. That's a fundamentally different, much deeper-history arrival than 1705. These may be: (a) two incompatible drafts of the same idea, with the 2025 session representing a pivot away from the 1705 version; (b) a deliberate two-layer history (an ancient arrival *and* a second 1705 event); or (c) the 2025 session drifting into generic alt-history brainstorming without deliberately invoking Thaer-specific canon. Needs an author decision before [[Gift I]]'s setting can be treated as fixed.

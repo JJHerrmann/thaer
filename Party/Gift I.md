@@ -55,6 +55,23 @@ A HeroForge figurine titled **"Gift I"** — bald, heavily bearded, human-presen
 
 ---
 
+## Level 1 Ledger
+
+**Attributes:** STR 15 · DEX 10 · CON 14 · INT 8 · WIS 12 · CHA 13
+**Vitality:** 12 &nbsp;|&nbsp; **Guard:** 16 (scale mail and shield)
+
+**Vow of the Horn** — his order's fighting discipline: fights defensively alongside a shield-bearing ally, trading a little offense for a lot of mutual protection.
+
+**The Throne's Mercy** — a small pool of restorative grace (5 points at Level 1) he can spend by touch to close wounds, on himself or an ally. Refills on a long rest.
+
+**Tenets of Reconciliation** — his order's actual oath, in place of a generic paladin's code: *nothing born can be beyond the Light's reach; the institution does not define your standing before it; the horn belongs to you, not to those who fear it.*
+
+No spells yet — per the tradition his order draws from, that comes with rank, not raw devotion. Level 1 is discipline and grace, not incantation.
+
+*Source: author-designed 2026-08-10, per [[Thaer]]'s Warden's Ledger system.*
+
+---
+
 ## Working titles vs. confirmed name
 
 - **"Paragon of the Horn"** — the order/archetype title for the tiefling-paladin concept generally; confirmed IP-clean (Tiefling and Paladin are SRD/OGL-safe, the title itself is original coined language, no WotC/Hasbro conflict as long as no verbatim rules text or Forgotten Realms-specific IP is used).
