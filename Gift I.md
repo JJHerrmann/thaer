@@ -4,6 +4,10 @@ subtype: character
 property: Thaer
 character: "Gift I"
 aliases: ["Paragon of the Horn", "War-Papa", "Tobiaus of Kmet"]
+race: "Tiefling (Luciferian bloodline)"
+class: "Paladin"
+deity: "Eloiheim"
+affiliation: "Papal State (Church-militant hierarchy)"
 created: 2026-08-10
 sources:
   - "Paragon of the Horn - 2025-12-05.md"

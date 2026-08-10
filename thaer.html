@@ -75,6 +75,26 @@
   main.content blockquote { margin: 0 0 0.85rem; padding: 0.4rem 0 0.4rem 0.9rem; border-left: 3px solid var(--panel-border); color: var(--ink-soft); font-size: 0.85rem; }
   main.content blockquote p { margin: 0; }
 
+  .infobox {
+    float: right; clear: right; width: 230px; margin: 0 0 1rem 1.5rem;
+    background: var(--nav-hover); border: 1px solid var(--panel-border); border-radius: 8px;
+    overflow: hidden;
+  }
+  @media (max-width: 640px) { .infobox { float: none; width: 100%; margin: 0 0 1.25rem; } }
+  .infobox img { width: 100%; height: auto; display: block; }
+  .infobox-name {
+    font-family: Georgia, "Iowan Old Style", serif; font-weight: 600; font-size: 1rem;
+    text-align: center; padding: 0.7rem 0.8rem 0.5rem; border-bottom: 1px solid var(--panel-border);
+  }
+  .infobox-facts { margin: 0; padding: 0.6rem 0.8rem 0.75rem; }
+  .infobox-row { padding: 0.4rem 0; border-bottom: 1px solid var(--panel-border); }
+  .infobox-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .infobox-row dt {
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 0.65rem;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 0.15rem;
+  }
+  .infobox-row dd { margin: 0; font-size: 0.86rem; line-height: 1.4; }
+
   .callout { background: var(--callout-bg); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: 6px; padding: 0.8rem 1rem; margin: 0 0 1rem; max-width: 74ch; }
   .callout-title { font-weight: 600; font-size: 0.86rem; margin-bottom: 0.3rem; }
   .callout-body { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.55; }
