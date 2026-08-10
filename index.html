@@ -11,15 +11,48 @@
     :root { --ground: #15171a; --ink: #e9e6db; --ink-soft: #b6b2a4; --accent: #c9a94a; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--ground); color: var(--ink); font-family: Segoe UI, system-ui, sans-serif; }
-  .wrap { max-width: 1180px; margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: Segoe UI, system-ui, sans-serif; position: relative; }
+  .watermark {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+    overflow: hidden; z-index: 0; pointer-events: none; opacity: 0;
+  }
+  .watermark svg { width: min(85vmin, 880px); height: auto; }
+  @media (prefers-color-scheme: dark) {
+    .watermark { opacity: 0.5; }
+  }
+  .wrap { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 1.5rem 1.25rem 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
   h1 { font-family: Georgia, "Iowan Old Style", serif; font-size: 1.4rem; margin: 0; }
   p { max-width: 74ch; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.55; margin: 0; }
   a { color: var(--accent); }
-  iframe { width: 100%; height: 900px; border: 0; border-radius: 6px; }
+  iframe { width: 100%; height: 900px; border: 0; border-radius: 6px; background: transparent; }
 </style>
 </head>
 <body>
+  <div class="watermark" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-hidden="true">
+      <defs>
+        <clipPath id="north-sector"><path d="M512 512L0 0H1024Z"/></clipPath>
+        <clipPath id="east-sector"><path d="M512 512L1024 0V1024Z"/></clipPath>
+        <clipPath id="south-sector"><path d="M512 512L1024 1024H0Z"/></clipPath>
+        <clipPath id="west-sector"><path d="M512 512L0 1024V0Z"/></clipPath>
+        <path id="outer-wall" d="M460 314L480 326L512 306L546 323L580 312L593 351L627 366L620 401L667 421L654 453L687 481L674 512L690 546L661 567L668 609L627 623L620 662L580 656L546 691L513 674L480 691L457 658L419 668L401 625L362 619L370 579L335 548L350 512L332 477L365 454L357 415L399 401L407 365L448 351Z"/>
+      </defs>
+      <g fill="none" stroke-linecap="square" stroke-linejoin="miter" stroke-width="12">
+        <path d="M470 0V276H431M498 0V302M526 0V302M554 0V276H593" stroke="#163c8c"/>
+        <path d="M1024 470H748V431M1024 498H722M1024 526H722M1024 554H748V593" stroke="#66238d"/>
+        <path d="M470 1024V748H431M498 1024V722M526 1024V722M554 1024V748H593" stroke="#0d6035"/>
+        <path d="M0 470H276V431M0 498H302M0 526H302M0 554H276V593" stroke="#e0a100"/>
+      </g>
+      <g fill="none" stroke="#1a1a1a" stroke-linecap="square" stroke-linejoin="miter">
+        <use href="#outer-wall" stroke="#163c8c" stroke-width="14" clip-path="url(#north-sector)"/>
+        <use href="#outer-wall" stroke="#66238d" stroke-width="14" clip-path="url(#east-sector)"/>
+        <use href="#outer-wall" stroke="#0d6035" stroke-width="14" clip-path="url(#south-sector)"/>
+        <use href="#outer-wall" stroke="#e0a100" stroke-width="14" clip-path="url(#west-sector)"/>
+        <path stroke-width="7" d="M465 340L482 351L512 333L542 348L567 339L578 372L607 385L598 414L642 432L629 458L660 484L648 512L663 542L636 561L642 598L607 609L598 643L568 637L542 666L513 651L483 666L463 638L431 647L415 611L382 603L390 574L358 545L373 512L356 482L388 459L381 427L416 415L425 383L456 372Z"/>
+        <path stroke-width="18" d="M486 320H538M486 704H538M320 486V538M704 486V538"/>
+      </g>
+    </svg>
+  </div>
   <div class="wrap">
     <h1>Thaer — worldbuilding reference</h1>
     <p>Working reference for the Thaer setting (an alternate Earth reshaped by the 1705 "Yawning"). Interactive map below toggles between the real circa-1705 religious-establishment baseline and the fictional post-Yawning empire consolidation. Source docs live alongside this in the repo.</p>
