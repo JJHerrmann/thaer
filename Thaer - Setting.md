@@ -12,6 +12,7 @@ sources:
   - "Build World- Fantasy-Sci-Fi-Cyberpunk 🌌 - 2023-07-22.md"
   - "Religious Shift, Western Exploration - 2023-07-22.md"
   - "DnD Victorian SCP Campaign - 2023-07-23.md"
+  - "Colonies for Theological Empires - 2023-07-29.md"
   - "Meso-Roman Civilization Blend - 2023-09-22.md"
   - "Paragon of the Horn - 2025-12-05.md"
   - "Branch · Paragon of the Horn - 2025-12-05.md"
@@ -64,6 +65,23 @@ This is the political substrate [[Gift I]]'s story runs on — the Catholic Chur
 **Vienna** is recognized as a free, neutral city — the point where all four religious empires' spheres of control converge without any one claiming it.
 
 *Source: Disney-inspired D&D Artifacts, 2023-07-17*
+
+### The seven Post-Yawning blocs (Empire Map reference)
+
+The interactive Empire Map (`Thaer - Empire Map.html`) expands the four-bloc sketch above into seven blocs total, built up gradually rather than in one session. Provenance is genuinely mixed — this map's own footer used to just say "sourced from three GPT sessions," which overstated how much GPT actually contributed versus how much was the author's own worldbuilding, dictated to GPT for development rather than originated by it. Breaking it down properly, by bloc:
+
+- **Catholic Union**, **Orthodox Empire** (called "Orthodox Union" in the original session), **Protestant Confederacy**, **Sunni Caliphate** (originally "the Grand Caliphate of Islam," singular/unsplit) — the author's own concept and naming, developed across three sessions. The core structural idea ("the major empires have formed so tightly knit confederations along religious lines") was stated by the author as an already-existing idea, not proposed by GPT. GPT's own July 22 attempt at flavor names for these (*Theldoria*, *Al-Aswad*, *Vinterholm*, *Byzalor*) was superseded by the more direct names above by the time of the July 29 session and isn't reflected on the map.
+  > Sources: `Build World Fantasy Sci-Fi Cyberpunk 🌌, 2023-07-22`; `DnD Victorian SCP Campaign, 2023-07-23`; `Colonies for Theological Empires, 2023-07-29`
+- **Co-Prosperity Sphere** — also the author's own concept and membership list (Japan, China, Mongolia, Tibet, Nepal, Korea, "banded together for their own protection" against the theocratic empires — explicitly secularist self-defense, not its own theocracy). GPT's suggested expansion (Burma, Thailand, Laos, Cambodia, Vietnam) was kept.
+  > Source: `Build World Fantasy Sci-Fi Cyberpunk 🌌, 2023-07-22`; expansion via `Colonies for Theological Empires, 2023-07-29`
+- **Specific real-world territory assignments** (which modern countries fall under which bloc) are a mix: GPT's own suggested colonial list survived almost entirely for the Sunni Caliphate and Co-Prosperity Sphere (its logic — "which real historically-Muslim / East Asian regions would this bloc plausibly hold" — happened to converge with 1705 religious reality). It did **not** survive for the Catholic Union or Protestant Confederacy: GPT's suggestions there (South Africa, Kenya, Tanzania, Rhodesia → Protestant; Mozambique, Angola, Madagascar, Algeria → Catholic) were built on *1867* colonial control, the date that specific session was set in — none of that colonization exists yet at 1705, the date the map actually uses. Sub-Saharan Africa on the map instead reflects independent 1705-specific research (traditional/indigenous religion almost everywhere at that date — see the map's own per-country hover notes).
+  > Source (kept, Caliphate/Co-Prosperity): `Colonies for Theological Empires, 2023-07-29`. Source (not kept, Africa): same session, superseded by later independent research, 2026-08-10.
+- **India's partition** — collaborative. GPT proposed the structural options (a partition among the existing blocs, once the author asked for one), but the author's own 6d6 dice roll determined which option actually "won" (Co-Prosperity Sphere's Northeast claim).
+  > Source: `Colonies for Theological Empires, 2023-07-29`
+
+%% Two items on the current map are NOT covered by any of the above and shouldn't be read as sourced:
+1. **Shia Bloc** as a separate empire from Sunni Caliphate (currently covers Iran/Azerbaijan/Bahrain, and stripes Afghanistan as Sunni-vs-Shia contested). This actually CONTRADICTS established lore: the DnD Victorian SCP session (Aug 14 sub-thread) has the author's own established plot point of a messianic Caliph who specifically unified Sunni and Shia Islam, erasing the succession dispute between them, tied to the Yawning itself. The Shia Bloc split was added unflagged during the 2026-08-10 map-building session and should probably be reverted/merged back into one unified Caliphate to stay consistent with that plot point. Pinned, not yet resolved, as of 2026-08-10 — author's call.
+2. **Mughal Sultanate** (its own bloc for India/Pakistan/Bangladesh, color #2A612B) — genuinely new, added 2026-08-10, not from any sourced session. Rationale: real Mughal emperors never deferred to Ottoman Caliphal authority (their own imperial title, not a subordinate one; Aurangzeb ruled arguably the wealthiest empire on Earth in 1705), so treating India as contested Caliphate/Co-Prosperity territory undersold it — it's its own great power, Sunni-aligned in religion but not politically subordinate to the Caliphate. Color chosen to reference the historical Mughal military/imperial green. %%
 
 ### Origin: this is a campaign setting, not just a novel setting
 
