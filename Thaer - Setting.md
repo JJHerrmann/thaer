@@ -32,6 +32,16 @@ Thaer is an alternate Earth with its own pre-existing divergence from real-world
 
 *Source: Build World Fantasy Sci-Fi Cyberpunk 🌌, 2023-07-22*
 
+### Present day: 1867
+
+The Yawning (1705, below) is the setting's founding divergence point — not its present day. The campaign itself, and everything built on top of the Post-Yawning political consolidation, runs **162 years later, in 1867**. This was never declared as a standalone fact anywhere in this vault before now, but it's stated explicitly and independently in two separate sessions rather than assumed: the Colonies session opens by describing "a near-earth campaign setting in 1867, where the empires of the world, in reaction to an event in 1705 that brought DnD races to the world, embraced Theological Politics..."; separately, the DnD Victorian SCP session builds out substantial 1867-specific material (Franz Joseph's exile situation, Scramble-for-Africa-era colonial reach) without ever needing to be told the year — it's just already 1867 there too.
+
+*Source: Colonies for Theological Empires, 2023-07-29; DnD Victorian SCP Campaign, 2023-07-23*
+
+This matters for reading the rest of this doc, the Empire Map, and [[Thaer - Capitals]]: the religious-bloc structure below was *established* in 1705, but by the time any actual story happens in Thaer, those blocs have had 162 years of their own internal history, generational succession (Franz Joseph is several generations removed from the 1705 Archduke whose excommunication he still carries), and colonial expansion. Read 1705 as origin, 1867 as now.
+
+This is a separate matter from the 9600 BCE/200 BC contradiction in the Open Threads below — that's a genuinely different, deeper-history draft from [[Gift I]]'s own session, not resolved or touched by pinning 1705-vs-1867 here.
+
 ### The Yawning (1705)
 
 In 1705, portals opened across the known world over the course of roughly **seventy seconds**, depositing entire communities, cultures, and species of sentient non-human D&D-style races (elves, dwarves, tieflings, etc.) across Africa, Eurasia, the Indian Subcontinent, Oceania, Australia, and the Middle East.
