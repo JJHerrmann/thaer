@@ -52,11 +52,12 @@
   <h1>Vienna — the Neutral City</h1>
   <p class="dek">Where all four theological empires' spheres of control converge — claimed by none of them. A stylized landmark
   map, not a literal survey: the fortress outline is the same star-fort geometry already used in Thaer's site motif
-  (traced from a real historical Vienna fortification plan); everything else here is invented flavor, not sourced from
-  any GPT log. Click a landmark for details.</p>
+  (traced from a real historical Vienna fortification plan). The four legations and Wardenhall are invented flavor, not
+  sourced from any GPT log; the Hofburg Palace marker is the exception — Franz Joseph, the Demiduke of Vienna, is real
+  sourced material with his own dedicated page. Click a landmark for details.</p>
   <div class="layout">
     <div class="map-card">
-      <svg viewBox="230 220 570 580" id="viennaSvg" role="img" aria-label="Stylized map of Vienna showing the four theopire legations and the Aegis of Equilibrium headquarters">
+      <svg viewBox="230 220 570 580" id="viennaSvg" role="img" aria-label="Stylized map of Vienna showing the four theopire legations, the Aegis of Equilibrium headquarters, and the Hofburg Palace">
         <defs>
           <radialGradient id="parchmentGrad" cx="50%" cy="45%" r="70%">
             <stop offset="0%" stop-color="var(--parchment)"/>
@@ -111,9 +112,11 @@
   </div>
   <footer>
     Fortress geometry reused from Thaer's existing site motif (itself traced from a real historical Vienna fortification
-    plan). Landmark placement, names, and descriptions below are new invented flavor as of 2026-08-10 — not sourced from
-    any GPT log, not yet reviewed as canon. See <a href="thaer.html">Thaer — worldbuilding reference</a> for the
-    Post-Yawning empires this page assumes.
+    plan). The four legations and Wardenhall are new invented flavor as of 2026-08-10 — not sourced from any GPT log,
+    not yet reviewed as canon. The Hofburg Palace marker, added 2026-08-13, is different: Franz Joseph is real sourced
+    material — see his <a href="Figures/franz-joseph.html">dedicated page</a> for the full biography, the 1705 origin
+    of his excommunication, and how his residency reconciles with this city's neutrality. See
+    <a href="thaer.html">Thaer — worldbuilding reference</a> for the Post-Yawning empires this page assumes.
   </footer>
 </div>
 <script>
@@ -131,15 +134,18 @@
     { x: 512, y: 320, r: 10, color: "#2c4a68", name: "The Protestant Legation",
       tag: "Protestant Confederacy — diplomatic mission",
       note: "North gate, facing the Confederacy's Northern European heartland. A legation rather than an embassy in the Catholic/Orthodox sense — reflecting the Confederacy's own looser, non-hierarchical structure (see the Protestant Confederacy page)." },
-    { x: 704, y: 512, r: 10, color: "#5b3467", name: "The Orthodox Legation",
+    { x: 704, y: 512, r: 10, color: "#66023C", name: "The Orthodox Legation",
       tag: "Orthodox Empire — diplomatic mission",
       note: "East gate, facing Muscovy and the Balkans/Caucasus. Which of the Empire's two real centers of gravity — Constantinople or Moscow — actually staffs this legation is an open question (see the Orthodox Empire page's Greek/Russian tension note)." },
     { x: 512, y: 704, r: 10, color: "#206b48", name: "The Caliphate Legation",
       tag: "Sunni Caliphate — diplomatic mission",
       note: "South gate, facing the Ottoman-adjacent Caliphate heartland. Whether this legation represents a single unified Caliphate or specifically the Sunni half of a still-unresolved Sunni/Shia question is genuinely undecided (see the Sunni Caliphate page)." },
-    { x: 320, y: 512, r: 10, color: "#8c2233", name: "The Catholic Legation",
+    { x: 320, y: 512, r: 10, color: "#FCD116", name: "The Catholic Legation",
       tag: "Catholic Union — diplomatic mission",
-      note: "West gate, facing Rome and the Catholic heartland of Western/Central Europe. Given the Papal State's own military structure (see War-Papa, on Gift I's page), this is presumably the best-defended of the four legations, even on strictly neutral ground." }
+      note: "West gate, facing Rome and the Catholic heartland of Western/Central Europe. Given the Papal State's own military structure (see War-Papa, on Gift I's page), this is presumably the best-defended of the four legations, even on strictly neutral ground." },
+    { x: 445, y: 512, r: 9, color: "#6b7280", name: "The Hofburg Palace",
+      tag: "Franz Joseph, Demiduke of Vienna — real sourced material",
+      note: "Home to Franz Joseph, current holder of the excommunicated Demiduke line, exiled to a 9-mile radius centered on this exact palace since 1705. Not a Catholic Union claim on the city despite his cultural ties — he's personally excommunicated, and his title carries no territory beyond this exile zone. Full biography: see the Franz Joseph page." }
   ];
 
   var g = document.getElementById("landmarks");

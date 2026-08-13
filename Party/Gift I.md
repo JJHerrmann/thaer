@@ -26,13 +26,13 @@ reviewed: false
 
 **Elevator hook:** A child of the rebel bloodline, sworn to the Throne he was born to defy.
 
-Gift I is a Luciferian tiefling — an ancestor made a pact with Lucifer (pre-Fall or post-Fall undecided), and that bloodline marks every descendant with horns, luminous or shadow-tinged eyes, and a subtle pressure in the air when they're emotional. Unusually, **he was raised passing as fully human**; his tiefling features didn't manifest until he was already an adult and already ordained a Paladin.
+Gift I is a Luciferian Tiefling — an ancestor made a pact with Lucifer (pre-Fall or post-Fall undecided), and that bloodline marks every descendant with horns, luminous or shadow-tinged eyes, and a subtle pressure in the air when they're emotional. Unusually, **he was raised passing as fully human**; his Tiefling features didn't manifest until he was already an adult and already ordained a Paladin.
 
 *Source: Paragon of the Horn, 2025-12-05*
 
-He is a **Paladin of Eloiheim** — "the One," the Source, the fountainhead of holiness. This is deliberate, not ironic: a child of the rebel star pledging himself to the Throne, framed as an act of reconciliation ("nothing born can be beyond the Light's reach"), not repentance for existing.
+He is a **Paladin of Elohim** — "the One," the Source, the fountainhead of holiness. This is deliberate, not ironic: a child of the rebel star pledging himself to the Throne, framed as an act of reconciliation ("nothing born can be beyond the Light's reach"), not repentance for existing.
 
-Politically, he's being groomed within the Church-militant hierarchy of the **Papal State** (a religious Empire — see [[Thaer]]) toward **War-Papa**: the wartime supreme commander the Papal State activates if it needs to go to war. He is close to that ascension when a battlefield catastrophe — and the doubt it produces — triggers his previously-dormant tiefling bloodline, manifesting his horns publicly for the first time.
+Politically, he's being groomed within the Church-militant hierarchy of the **Papal State** (a religious Empire — see [[Thaer]]) toward **War-Papa**: the wartime supreme commander the Papal State activates if it needs to go to war. He is close to that ascension when a battlefield catastrophe — and the doubt it produces — triggers his previously-dormant Tiefling bloodline, manifesting his horns publicly for the first time.
 
 *Source: Paragon of the Horn, 2025-12-05*
 
@@ -40,7 +40,7 @@ Politically, he's being groomed within the Church-militant hierarchy of the **Pa
 
 His signature beat, in two acts:
 
-- **Horn One — The Parade Cut.** Public, deliberate, performed in formation in front of the Church. Addressed to the *institution*, not to God: a statement that the Church no longer holds power over his standing before Eloiheim.
+- **Horn One — The Parade Cut.** Public, deliberate, performed in formation in front of the Church. Addressed to the *institution*, not to God: a statement that the Church no longer holds power over his standing before Elohim.
 - **Horn Two — The Jerusalem Cut.** Private, at a temple in Jerusalem, alone. Addressed to God: an offering, not a rejection — declaring the *agency* to define what his bloodline means rather than disowning it.
 
 He goes on to reach "Level 20 Paladin" in myth-terms: leading without needing validation, confronting evil without fear of resembling it, carrying both Light and Shadow without apology.
@@ -58,7 +58,7 @@ A HeroForge figurine titled **"Gift I"** — bald, heavily bearded, human-presen
 ## Level 1 Ledger
 
 **Attributes:** STR 15 · DEX 10 · CON 14 · INT 8 · WIS 12 · CHA 13
-**Vitality:** 12 &nbsp;|&nbsp; **Guard:** 16 (scale mail and shield)
+**Vitality:** 12 | **Guard:** 16 (scale mail and shield)
 
 **Vow of the Horn** — his order's fighting discipline: fights defensively alongside a shield-bearing ally, trading a little offense for a lot of mutual protection.
 
@@ -74,7 +74,7 @@ No spells yet — per the tradition his order draws from, that comes with rank, 
 
 ## Working titles vs. confirmed name
 
-- **"Paragon of the Horn"** — the order/archetype title for the tiefling-paladin concept generally; confirmed IP-clean (Tiefling and Paladin are SRD/OGL-safe, the title itself is original coined language, no WotC/Hasbro conflict as long as no verbatim rules text or Forgotten Realms-specific IP is used).
+- **"Paragon of the Horn"** — the order/archetype title for the Tiefling-paladin concept generally; confirmed IP-clean (Tiefling and Paladin are SRD/OGL-safe, the title itself is original coined language, no WotC/Hasbro conflict as long as no verbatim rules text or Forgotten Realms-specific IP is used).
 - **"War-Papa"** — his political/military title within the Papal State, not a personal name.
 - **"Gift I"** — his actual regnal/papal name, per the HeroForge figurine's title. This has **not** been located anywhere in the searchable GPT log text despite multiple targeted searches (including for "Pope Gift," Latin/Greek gift-root name candidates like Donatus/Theodore/Dorotheus, and broad full-corpus search). It may be from a session outside this archive, or simply wasn't captured well by semantic search. Treat as author-confirmed via the physical figurine regardless of the missing paper trail.
 - **"Tobiaus of Kmet"** — a working alias explored for a hidden/exile-period identity (assigned name, "safe name," his old name reduced to rumor). Explicitly floated as one option among several, not locked.

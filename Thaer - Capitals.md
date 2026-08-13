@@ -19,15 +19,9 @@ reviewed: false
 
 ## Catholic League — Rome, with a dispossessed Archduke's court at Vienna
 
-The Catholic League's formal seat is **Rome**, as expected. The **Archduke Franz Joseph**, styled "the Magnanimous Archduke of Steel," resides in **Stuhnstadt, Vienna** — but not as a rival claimant to the city.
+The Catholic League's formal seat is **Rome**. The **Demiduke of Vienna** — the current holder is Franz Joseph, styled "the Magnanimous Archduke of Steel" — resides in the Hofburg Palace in Vienna, but not as a rival claimant to the city: his line was excommunicated and stripped of its real Habsburg territories generations ago, and the title he holds carries no land beyond his own tiny exile zone. Full biography, the 1705 origin of that excommunication, and how his presence there reconciles with Vienna's own neutrality: see [[Franz Joseph]].
 
-*Source: DnD Victorian SCP Campaign, 2023-07-23 (2023-07-31 sub-session)*
-
-**How this reconciles with Vienna's neutrality (author resolution, 2026-08-13):** Franz Joseph is the former Heir Apparent of the real, pre-Yawning Empire of Austria — a throne that, structurally, no longer exists to inherit. The Yawning-era consolidation absorbed his family's actual hereditary lands into the surrounding theological empires (the Austrian Circle and Royal Hungary are Catholic Union ground in their own right now — see [[Catholic Union]] and the Empire Map's `AUSTRIAN_CIRCLE_1792`/`AUSTRIA_1700` entries). "Archduke" is a title with no territory left beneath it, not a competing claim on the city he lives in.
-
-Vienna itself fought hard to keep its neutrality, rejecting direct advances from all four theocracies. Its founding advantage, per this same resolution: rather than repeat a real historical mistake — Constantinople in 1453 ignored an engineer named Orban's offer of a massive siege cannon, who then sold the design to the Ottomans, whose bombardment breached the city's walls — Vienna *bought* the equivalent weapon itself. That purchased deterrent kept all four Post-Yawning empires at arm's length long enough for neutrality to harden into accepted fact: the one place the four powers can meet without any of them holding the ground.
-
-Franz Joseph's residency there, then, isn't a Catholic claim on neutral soil — it's a dispossessed exile living on ground that happens to be neutral, same as any other refugee of the Yawning's territorial reshuffling.
+*Source: DnD Victorian SCP Campaign, 2023-07-23*
 
 ## Orthodox Empire — Krestgrad, on the Volga
 
@@ -80,13 +74,10 @@ Per author direction (2026-08-13): same principle, Persia's real capital. **Isfa
 
 *Source: real-history research, 2026-08-13.*
 
-## Open
-
-- Whether this Franz Joseph/Vienna resolution should also be folded into the [Vienna landmark page](Thaer%20-%20Vienna.html) itself (its current legation blurbs don't mention him or the cannon story) — not yet synced.
-
 ## Related
 
 - [[Thaer]] — full Post-Yawning blocs breakdown and sourcing.
 - [[Catholic Union]], [[Orthodox Empire]], [[Protestant Confederacy]], [[Sunni Caliphate]] — the four bloc stub pages these capitals belong to.
-- [Vienna landmark page](Thaer%20-%20Vienna.html) — the neutral city, in tension with Franz Joseph's Vienna residency above.
+- [[Franz Joseph]] — full biography of the Demiduke of Vienna.
+- [Vienna landmark page](Thaer%20-%20Vienna.html) — the neutral city; his residence, the Hofburg Palace, is marked there.
 #thaer #fantasy #dnd
