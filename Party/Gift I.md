@@ -96,3 +96,4 @@ No spells yet — per the tradition his order draws from, that comes with rank, 
 
 - [[Thaer]] — the setting: alternate Earth, the 1705 Yawning event, post-event religious-empire political structure. Same open contradiction on arrival timeline applies to both docs.
 - Next planned step (as of 2026-08-10): porting Gift I into a progression-fantasy / LitRPG mechanical structure — not yet started, no game-system material exists for him yet.
+#thaer #fantasy #dnd

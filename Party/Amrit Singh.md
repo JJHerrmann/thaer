@@ -2,15 +2,22 @@
 type: entity
 subtype: character
 property: Thaer
-character: "Amrit Singh"
-culture: "Punjabi Sikh"
-race: "Dwarf"
-class: "Fighter"
-affiliation: "Aegis of Equilibrium (Junior Warden)"
+character: Amrit Singh
+culture: Punjabi Sikh
+race: Dwarf
+class: Fighter
+affiliation: Aegis of Equilibrium (Junior Warden)
 created: 2026-08-10
 sources:
-  - "Author-assigned 2026-08-10, completing the six-person party roster confirmed on Gift I's page"
+  - Author-assigned 2026-08-10, completing the six-person party roster confirmed on Gift I's page
 reviewed: false
+tags:
+  - thaer
+  - fantasy
+  - dnd
+  - character
+  - dwarf
+  - sihk
 ---
 
 > [!note] How this doc was built
@@ -37,3 +44,4 @@ No spells — a Fighter's Level 1 toolkit is entirely martial.
 
 - [[Gift I]] — party's Paladin, Levantine.
 - [[Thaer]] — the Aegis of Equilibrium is the party's shared employer.
+#thaer #fantasy #dnd

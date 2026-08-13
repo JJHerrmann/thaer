@@ -39,3 +39,4 @@ No spells — a Rogue's Level 1 tricks are entirely mundane, which is rather the
 
 - [[Gift I]] — party's Paladin, Levantine.
 - [[Thaer]] — the Aegis of Equilibrium is the party's shared employer.
+#thaer #fantasy #dnd

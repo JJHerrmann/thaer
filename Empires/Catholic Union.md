@@ -33,3 +33,4 @@ The clearest concrete example of how this plays out: the **War-Papa** role descr
 
 - [[Thaer]] — full Post-Yawning blocs breakdown and sourcing.
 - [[Gift I]] — Paladin of Eloiheim, groomed as War-Papa within the Papal State.
+#thaer #fantasy #dnd

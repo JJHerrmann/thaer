@@ -37,3 +37,4 @@ This is a genuinely strong, specific hook: a single reformer whose legitimacy is
 ## Related
 
 - [[Thaer]] — full Post-Yawning blocs breakdown and sourcing.
+#thaer #fantasy #dnd

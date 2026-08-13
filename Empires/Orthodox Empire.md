@@ -32,3 +32,4 @@ One of the four Post-Yawning theological empires. After 1705, the Eastern Orthod
 ## Related
 
 - [[Thaer]] — full Post-Yawning blocs breakdown and sourcing.
+#thaer #fantasy #dnd

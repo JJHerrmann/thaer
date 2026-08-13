@@ -30,3 +30,4 @@ One of the four Post-Yawning theological empires — and structurally the odd on
 ## Related
 
 - [[Thaer]] — full Post-Yawning blocs breakdown and sourcing.
+#thaer #fantasy #dnd

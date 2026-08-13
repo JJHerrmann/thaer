@@ -151,3 +151,4 @@ Class-specific features and spells are renamed per character, individually flavo
 
 - [[Gift I]] — Paladin of Eloiheim, groomed as War-Papa within the Papal State; the character this setting doc was compiled to support.
 - Bloodline: Spirits of the Smokies and The Rook / The Argonaut (Mythic Comics) are separate properties, not part of Thaer continuity.
+#thaer #fantasy #dnd

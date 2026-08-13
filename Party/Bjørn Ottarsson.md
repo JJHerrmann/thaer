@@ -41,3 +41,4 @@ Cantrips known:
 
 - [[Gift I]] — party's Paladin, Levantine.
 - [[Thaer]] — the Aegis of Equilibrium is the party's shared employer.
+#thaer #fantasy #dnd
