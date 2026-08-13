@@ -17,13 +17,17 @@ reviewed: false
 
 # Capitals of the Post-Yawning Empires
 
-## Catholic League — Rome, with a shadow capital at Vienna
+## Catholic League — Rome, with a dispossessed Archduke's court at Vienna
 
-The Catholic League's formal seat is **Rome**, as expected. But its political center of gravity in practice sits with the exiled **Archduke Franz Joseph**, styled "the Magnanimous Archduke of Steel," residing in **Stuhnstadt, Vienna**.
+The Catholic League's formal seat is **Rome**, as expected. The **Archduke Franz Joseph**, styled "the Magnanimous Archduke of Steel," resides in **Stuhnstadt, Vienna** — but not as a rival claimant to the city.
 
 *Source: DnD Victorian SCP Campaign, 2023-07-23 (2023-07-31 sub-session)*
 
-Worth flagging: this predates and sits independently of the neutral-Vienna concept already documented on the [[Thaer]] Empire Map and the [Vienna landmark page](Thaer%20-%20Vienna.html) (Vienna as ground claimed by none of the four powers). Whether an exiled Catholic Archduke residing in Vienna is compatible with Vienna's neutrality, or whether one of these ideas supersedes the other, is unresolved — flagged here rather than quietly reconciled.
+**How this reconciles with Vienna's neutrality (author resolution, 2026-08-13):** Franz Joseph is the former Heir Apparent of the real, pre-Yawning Empire of Austria — a throne that, structurally, no longer exists to inherit. The Yawning-era consolidation absorbed his family's actual hereditary lands into the surrounding theological empires (the Austrian Circle and Royal Hungary are Catholic Union ground in their own right now — see [[Catholic Union]] and the Empire Map's `AUSTRIAN_CIRCLE_1792`/`AUSTRIA_1700` entries). "Archduke" is a title with no territory left beneath it, not a competing claim on the city he lives in.
+
+Vienna itself fought hard to keep its neutrality, rejecting direct advances from all four theocracies. Its founding advantage, per this same resolution: rather than repeat a real historical mistake — Constantinople in 1453 ignored an engineer named Orban's offer of a massive siege cannon, who then sold the design to the Ottomans, whose bombardment breached the city's walls — Vienna *bought* the equivalent weapon itself. That purchased deterrent kept all four Post-Yawning empires at arm's length long enough for neutrality to harden into accepted fact: the one place the four powers can meet without any of them holding the ground.
+
+Franz Joseph's residency there, then, isn't a Catholic claim on neutral soil — it's a dispossessed exile living on ground that happens to be neutral, same as any other refugee of the Yawning's territorial reshuffling.
 
 ## Orthodox Empire — Krestgrad, on the Volga
 
@@ -64,11 +68,21 @@ The council's own institutional identity, also from this session:
 
 *Source: DnD Victorian SCP Campaign, 2023-07-23 (2023-07-31 sub-session)*
 
+## Mughal Sultanate — Aurangabad, not Delhi
+
+Per author direction (2026-08-13): use the Mughals' real historical capital rather than inventing one. That capital is genuinely **Aurangabad**, in the Deccan, not the more famous Shahjahanabad (Delhi) — and specifically so at 1705. Emperor Aurangzeb had shifted his functional base to the Deccan decades earlier (around 1653) and spent his final years ruling from there and from mobile military encampments while the Deccan wars ran on continuously; Delhi remained the formal, traditional seat (the Red Fort, the Peacock Throne) but wasn't where the emperor actually governed from at this exact date. Aurangzeb died in 1707, two years after this map's date, still without having returned to Delhi.
+
+*Source: real-history research, 2026-08-13.*
+
+## Shia Bloc — Isfahan
+
+Per author direction (2026-08-13): same principle, Persia's real capital. **Isfahan** was the Safavid capital continuously from 1598 (Shah Abbas I) until the dynasty's fall in 1722, spanning the entire reign of Shah Sultan Husayn (r. 1694–1722), the Shah on the throne in 1705. This holds regardless of how the Sunni/Shia unification question is ultimately resolved (see [[Sunni Caliphate]]'s pinned inconsistency) — if a separate Shia-specific polity persists in any form, Isfahan is its capital.
+
+*Source: real-history research, 2026-08-13.*
+
 ## Open
 
-- Whether Franz Joseph's Vienna residency is compatible with Vienna's separately-documented neutral status (see above) — unresolved, not papered over.
-- No capital exists yet for the **Mughal Sultanate**, which is new lore added 2026-08-10 and postdates all of the above sessions by roughly three years.
-- No capital exists yet for the **Shia Bloc**, whose very existence as a separate entity from the Sunni Caliphate is itself pinned/unresolved — see [[Sunni Caliphate]].
+- Whether this Franz Joseph/Vienna resolution should also be folded into the [Vienna landmark page](Thaer%20-%20Vienna.html) itself (its current legation blurbs don't mention him or the cannon story) — not yet synced.
 
 ## Related
 
