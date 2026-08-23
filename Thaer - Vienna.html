@@ -55,10 +55,11 @@
   and Donaukanal, and the real old city (via four geocoded Ringstrasse points), all ported in from the sidebar
   panel at right, on one shared coordinate system centered on Stephansdom. The wall is genuinely just an open arc,
   not a closed ring — its two real ends terminate at the canal rather than meeting each other. The four legations
-  and Wardenhall are still invented flavor, not sourced from any GPT log, but their positions below are now stale
-  leftovers from the old star shape's gate points and haven't been redecided against this real geometry yet; the
-  Hofburg Palace marker is the exception — Franz Joseph, the Demiduke of Vienna, is real sourced material with his
-  own dedicated page. Click a landmark for details.</p>
+  and Wardenhall are still invented flavor, not sourced from any GPT log, but as of 2026-08-23 their positions are
+  no longer stale leftovers from the old star shape — each now sits at the real wall point (or, for the Caliphate,
+  the real island) that actually minimizes distance to its patron's nearest territory, since this setting's
+  teleportation magic has range limits; the Hofburg Palace marker is the exception — Franz Joseph, the Demiduke of
+  Vienna, is real sourced material with his own dedicated page. Click a landmark for details.</p>
   <div class="layout">
     <div class="map-card">
       <svg viewBox="230 220 570 580" id="viennaSvg" role="img" aria-label="Map of Vienna built on the real 1706 Linienwall survey, the Danube and Donaukanal, and the old city, showing the four theopire legations, the Aegis of Equilibrium headquarters, and the Hofburg Palace">
@@ -231,9 +232,12 @@
     OpenStreetMap/Nominatim; then later the same day with the actual 1706 Linienwall survey itself (see the sidebar
     panel's own credit line), ported into the main map so both views now share one Stephansdom-centered coordinate
     system built entirely on real data, not invention. The four legations and Wardenhall are still new invented
-    flavor as of 2026-08-10 — not sourced from any GPT log, not yet reviewed as canon — and their marker positions
-    below are current stale leftovers from the old star shape's gate points, not yet redecided against the real
-    wall. The Hofburg Palace marker, added 2026-08-13, is different: Franz Joseph is real sourced
+    flavor as of 2026-08-10 — not sourced from any GPT log, not yet reviewed as canon — but as of 2026-08-23 their
+    marker positions are redecided against the real wall: each sits at the real point closest to its patron's own
+    territory (Protestant NW toward Saxony, Orthodox SE toward Hungary/the Balkans), the Caliphate legation moved
+    to Leopoldstadt for real defensibility rather than a themed direction, and the Catholic legation kept a
+    roughly western point since, as an enclave inside Catholic Union territory, no direction is meaningfully
+    closer than any other. The Hofburg Palace marker, added 2026-08-13, is different: Franz Joseph is real sourced
     material — see his <a href="Figures/franz-joseph.html">dedicated page</a> for the full biography, the 1705 origin
     of his excommunication, and how his residency reconciles with this city's neutrality. See
     <a href="thaer.html">Thaer — worldbuilding reference</a> for the Post-Yawning empires this page assumes.
@@ -247,26 +251,31 @@
 (function () {
   var svgNS = "http://www.w3.org/2000/svg";
 
-  // Placed at the fortress's four gate-breaks (north/east/south/west) plus
-  // dead center, matching the quadrant colors already established in the
-  // site's roadwork motif: north=Protestant blue, east=Orthodox purple,
-  // south=Caliphate green, west=Catholic gold.
+  // Redecided 2026-08-23 against the REAL 1706 Linienwall survey (the four positions had sat
+  // stale at the old invented star-shape's gate points since the 2026-08-22 geometry replacement).
+  // New logic: each legation sits at the real wall point whose compass bearing from Stephansdom
+  // points most directly at its patron's actual nearest territory -- not just a themed direction,
+  // but the shortest real line, since this setting's teleportation magic has range limits and every
+  // legation wants to minimize the distance a courier or caster has to cover. Sampled from the real
+  // 295-point 1706 survey chain, not eyeballed. Catholic is the one exception: Vienna sits as an
+  // enclave inside Catholic Union territory in every direction, so there's no "closest line" to
+  // optimize for -- any point on the wall is equally Catholic ground on the other side of it.
   var LANDMARKS = [
     { x: 512, y: 512, r: 12, color: "#c9a94a", name: "Wardenhall",
       tag: "Aegis of Equilibrium — regional headquarters",
       note: "Sits at the exact center of the neutral city, equidistant from all four legations by design. Doubles as an artifact vault, per the Aegis's usual practice — the political neutrality of the ground it stands on is presumably part of why this particular chapter is based here." },
-    { x: 495, y: 337, r: 10, color: "#2c4a68", name: "The Protestant Legation",
+    { x: 427.4, y: 427.3, r: 10, color: "#2c4a68", name: "The Protestant Legation",
       tag: "Protestant Confederacy — diplomatic mission",
-      note: "North gate (repositioned 2026-08-22 to the real Schottenring point, once the wall shape itself was redrawn from real geocoded data), facing the Confederacy's Northern European heartland. A legation rather than an embassy in the Catholic/Orthodox sense — reflecting the Confederacy's own looser, non-hierarchical structure (see the Protestant Confederacy page)." },
-    { x: 642, y: 506, r: 10, color: "#66023C", name: "The Orthodox Legation",
+      note: "Real wall point, bearing 315° (NW) from Stephansdom — the shortest line to Bohemia and on into Saxony/Brandenburg, the actual nearest Protestant-held ground, not just a themed \"north\" placement. A legation rather than an embassy in the Catholic/Orthodox sense — reflecting the Confederacy's own looser, non-hierarchical structure (see the Protestant Confederacy page)." },
+    { x: 622.3, y: 621.7, r: 10, color: "#66023C", name: "The Orthodox Legation",
       tag: "Orthodox Empire — diplomatic mission",
-      note: "East gate (repositioned 2026-08-22 to the real Stubenring point), facing Muscovy and the Balkans/Caucasus. Which of the Empire's two real centers of gravity — Constantinople or Moscow — actually staffs this legation is an open question (see the Orthodox Empire page's Greek/Russian tension note)." },
-    { x: 454, y: 642, r: 10, color: "#206b48", name: "The Caliphate Legation",
+      note: "Real wall point, bearing 135° (SE) from Stephansdom — the line toward Hungary and on into the Balkans, which is now the genuinely closest Orthodox-controlled territory (Romania and Eastern Thrace, since the 1775 Bosphorus Ledger partition), not distant Moscow. Which of the Empire's centers of gravity actually staffs this legation is still an open question (see the Orthodox Empire page's Greek/Russian/Oriental tension note)." },
+    { x: 582.0, y: 459.1, r: 10, color: "#206b48", name: "The Caliphate Legation",
       tag: "Sunni Caliphate — diplomatic mission",
-      note: "South gate (repositioned 2026-08-22 to the real Opernring point), facing the Ottoman-adjacent Caliphate heartland. Whether this legation represents a single unified Caliphate or specifically the Sunni half of a still-unresolved Sunni/Shia question is genuinely undecided (see the Sunni Caliphate page)." },
-    { x: 336, y: 572, r: 10, color: "#FCD116", name: "The Catholic Legation",
+      note: "Moved 2026-08-23 to Leopoldstadt — the island between the Donaukanal and the main Danube, water-bounded on two sides and reachable only by a handful of real bridges (Taborbrücke among them). Vienna's own real history includes two actual Ottoman sieges (1529, 1683), so a Caliphate legation sitting exposed on a public toll road is a genuine liability, not just flavor; a warded arrival point behind guarded bridges lets visitors reach it without setting foot on Vienna's streets at all. Traded a themed \"south-facing\" placement for an actually defensible one." },
+    { x: 386.9, y: 511.5, r: 10, color: "#FCD116", name: "The Catholic Legation",
       tag: "Catholic Union — diplomatic mission",
-      note: "West gate (repositioned 2026-08-22 to the real Burgring point), facing Rome and the Catholic heartland of Western/Central Europe. Given the Papal State's own military structure (see War-Papa, on Gift I's page), this is presumably the best-defended of the four legations, even on strictly neutral ground." },
+      note: "Real wall point, bearing ~270° (W). Placement barely matters here — Vienna is an enclave inside Catholic Union territory on every side, so unlike the other three legations there's no single nearest line to Catholic ground to optimize for; any point on the wall opens onto more of it. Given the Papal State's own military structure (see War-Papa, on Gift I's page), this is presumably the best-defended of the four legations regardless of which gate it sits at." },
     { x: 445, y: 512, r: 9, color: "#6b7280", name: "The Hofburg Palace",
       tag: "Franz Joseph, Demiduke of Vienna — real sourced material",
       note: "Home to Franz Joseph, current holder of the excommunicated Demiduke line, exiled to a 9-mile radius centered on this exact palace since 1705. Not a Catholic Union claim on the city despite his cultural ties — he's personally excommunicated, and his title carries no territory beyond this exile zone. Full biography: see the Franz Joseph page." }
