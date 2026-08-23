@@ -2,6 +2,7 @@
 type: entity
 subtype: npc
 property: Thaer
+tags: [Thaer, figures, fiction]
 character: "Franz Joseph"
 aliases: ["Demiduke of Vienna", "the Magnanimous Archduke of Steel", "Franz Josef"]
 culture: "Austrian (Habsburg-Lorraine)"
@@ -12,7 +13,7 @@ sources:
   - "Habsburgs 1705 Cadet Branch - 2023-07-22.md"
 reviewed: false
 ---
-
+![[Pasted image 20260813121818.png]]
 > [!note] How this doc was built
 > Compiled from the DnD Victorian SCP Campaign and Habsburgs 1705 Cadet Branch sessions during a deep GPT-log research pass (2026-08-13). This character reuses the real historical Franz Joseph I of Austria's (1830–1916) actual biography and family tree wholesale, transplanted into an alternate outcome rather than invented from scratch — every genealogical fact below is real, only the political situation around him is altered. Several details are explicitly still open or only lightly sketched — see Open Threads. One section (Vienna's neutrality) is the author's own new resolution (2026-08-13), not from the 2023 sessions, and is marked as such.
 

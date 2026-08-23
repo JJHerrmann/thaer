@@ -2,6 +2,7 @@
 type: entity
 subtype: empire
 property: Thaer
+tags: [Thaer, empires, fiction]
 name: "Sunni Caliphate"
 aliases: ["Grand Caliphate of Islam", "United Caliphate"]
 founding_basis: "Islamic Caliphate"

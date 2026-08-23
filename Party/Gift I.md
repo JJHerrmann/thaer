@@ -2,6 +2,7 @@
 type: entity
 subtype: character
 property: Thaer
+tags: [Thaer, party, fiction]
 character: "Gift I"
 aliases: ["Paragon of the Horn", "War-Papa", "Tobiaus of Kmet"]
 culture: "Levantine"

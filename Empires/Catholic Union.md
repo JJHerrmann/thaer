@@ -2,6 +2,7 @@
 type: entity
 subtype: empire
 property: Thaer
+tags: [Thaer, empires, fiction]
 name: "Catholic Union"
 founding_basis: "Catholic Church"
 created: 2026-08-10

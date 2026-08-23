@@ -2,6 +2,7 @@
 type: entity
 subtype: reference
 property: Thaer
+tags: [Thaer, reference, fiction]
 name: "Capitals"
 aliases: ["Thaer - Capitals", "Capitals of the Post-Yawning Empires"]
 created: 2026-08-13

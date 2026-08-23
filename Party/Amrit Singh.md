@@ -18,6 +18,7 @@ tags:
   - character
   - dwarf
   - sihk
+  - fiction
 ---
 
 > [!note] How this doc was built

@@ -2,6 +2,7 @@
 type: entity
 subtype: character
 property: Thaer
+tags: [Thaer, party, fiction]
 character: "Edmund Thorne"
 culture: "English"
 race: "Elf"

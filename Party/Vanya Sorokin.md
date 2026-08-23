@@ -2,6 +2,7 @@
 type: entity
 subtype: character
 property: Thaer
+tags: [Thaer, party, fiction]
 character: "Vanya Sorokin"
 culture: "Russian"
 race: "Goblin"

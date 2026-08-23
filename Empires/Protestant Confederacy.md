@@ -2,6 +2,7 @@
 type: entity
 subtype: empire
 property: Thaer
+tags: [Thaer, empires, fiction]
 name: "Protestant Confederacy"
 aliases: ["Protestant Confederation"]
 founding_basis: "Protestant churches, Northern Europe"

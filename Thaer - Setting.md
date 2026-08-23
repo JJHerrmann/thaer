@@ -2,6 +2,7 @@
 type: entity
 subtype: setting
 property: Thaer
+tags: [Thaer, setting, fiction]
 aliases: [Thaer, The Yawning, R.O.D.E., Aegis of Equilibrium]
 created: 2026-08-10
 sources:

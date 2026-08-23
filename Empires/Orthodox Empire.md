@@ -2,6 +2,7 @@
 type: entity
 subtype: empire
 property: Thaer
+tags: [Thaer, empires, fiction]
 name: "Orthodox Empire"
 aliases: ["Orthodox Union"]
 founding_basis: "Eastern Orthodox Church"

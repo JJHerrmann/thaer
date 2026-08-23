@@ -50,21 +50,23 @@
 <div class="wrap">
   <a class="back" href="thaer.html">&larr; Back to Thaer</a>
   <h1>Vienna — the Neutral City</h1>
-  <p class="dek">Where all four theological empires' spheres of control converge — claimed by none of them. A stylized landmark
-  map, not a literal survey: the fortress outline is the same star-fort geometry already used in Thaer's site motif
-  (traced from a real historical Vienna fortification plan). The four legations and Wardenhall are invented flavor, not
-  sourced from any GPT log; the Hofburg Palace marker is the exception — Franz Joseph, the Demiduke of Vienna, is real
-  sourced material with his own dedicated page. Click a landmark for details.</p>
+  <p class="dek">Where all four theological empires' spheres of control converge — claimed by none of them. The map
+  (updated 2026-08-22) is no longer an invented star shape — it's the real 1706 Linienwall survey, the real Danube
+  and Donaukanal, and the real old city (via four geocoded Ringstrasse points), all ported in from the sidebar
+  panel at right, on one shared coordinate system centered on Stephansdom. The wall is genuinely just an open arc,
+  not a closed ring — its two real ends terminate at the canal rather than meeting each other. The four legations
+  and Wardenhall are still invented flavor, not sourced from any GPT log, but their positions below are now stale
+  leftovers from the old star shape's gate points and haven't been redecided against this real geometry yet; the
+  Hofburg Palace marker is the exception — Franz Joseph, the Demiduke of Vienna, is real sourced material with his
+  own dedicated page. Click a landmark for details.</p>
   <div class="layout">
     <div class="map-card">
-      <svg viewBox="230 220 570 580" id="viennaSvg" role="img" aria-label="Stylized map of Vienna showing the four theopire legations, the Aegis of Equilibrium headquarters, and the Hofburg Palace">
+      <svg viewBox="230 220 570 580" id="viennaSvg" role="img" aria-label="Map of Vienna built on the real 1706 Linienwall survey, the Danube and Donaukanal, and the old city, showing the four theopire legations, the Aegis of Equilibrium headquarters, and the Hofburg Palace">
         <defs>
           <radialGradient id="parchmentGrad" cx="50%" cy="45%" r="70%">
             <stop offset="0%" stop-color="var(--parchment)"/>
             <stop offset="100%" stop-color="var(--ground-2)"/>
           </radialGradient>
-          <path id="outerWall" d="M460 314L480 326L512 306L546 323L580 312L593 351L627 366L620 401L667 421L654 453L687 481L674 512L690 546L661 567L668 609L627 623L620 662L580 656L546 691L513 674L480 691L457 658L419 668L401 625L362 619L370 579L335 548L350 512L332 477L365 454L357 415L399 401L407 365L448 351Z"/>
-          <path id="innerWall" d="M465 340L482 351L512 333L542 348L567 339L578 372L607 385L598 414L642 432L629 458L660 484L648 512L663 542L636 561L642 598L607 609L598 643L568 637L542 666L513 651L483 666L463 638L431 647L415 611L382 603L390 574L358 545L373 512L356 482L388 459L381 427L416 415L425 383L456 372Z"/>
         </defs>
 
         <rect x="230" y="220" width="570" height="580" fill="url(#parchmentGrad)"/>
@@ -92,31 +94,153 @@
         <text x="512" y="255" text-anchor="middle" font-family="Georgia, 'Iowan Old Style', serif" font-size="22" letter-spacing="4" fill="var(--ink)" opacity="0.85">VIENNA</text>
         <text x="512" y="272" text-anchor="middle" font-family="Georgia, 'Iowan Old Style', serif" font-style="italic" font-size="11" fill="var(--ink-soft)">civitas neutralis</text>
 
-        <!-- The fortress: double star-wall, reused from the site's existing Vienna motif -->
-        <use href="#outerWall" fill="none" stroke="#5a4a30" stroke-width="6" opacity="0.85"/>
-        <use href="#innerWall" fill="none" stroke="#8a7550" stroke-width="3" opacity="0.7"/>
+        <!-- Ported 2026-08-22 from the sidebar inset, same source and same Stephansdom-centered
+             coordinate system, just rescaled (50px/km here vs 40px/km there) to fill this canvas.
+             No more invented star-wall: this is the real 1706 Linienwall survey, the real Danube/
+             Donaukanal, and the real Ringstrasse-derived old city, all traced from actual GIS data. -->
 
-        <!-- Gate breaks, matching the existing motif: the city accepts delegates, not routes -->
-        <g stroke="var(--parchment)" stroke-width="10">
-          <path d="M486 320H538M486 704H538M320 486V538M704 486V538"/>
-        </g>
+        <!-- Main Danube channel -->
+        <path d="M662.0,362.0 L724.5,393.3 L724.5,512.0 L680.8,699.5 L649.5,690.8 L689.5,505.8 L630.8,393.3 Z" fill="#5ba3d0" opacity="0.3"/>
+        <text x="700" y="440" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="var(--ink-soft)" opacity="0.8" transform="rotate(66 700 440)">Donau</text>
 
-        <!-- Landmark markers -->
+        <!-- Danube Canal: the real feature the wall's two open ends both terminate against -->
+        <path d="M496.5,426.5 C524.5,434.5 547.0,455.8 559.5,487.0 C572.0,515.8 599.5,530.8 630.8,537.0 C655.8,540.8 672.0,545.8 677.1,550.3"
+          fill="none" stroke="#4a92c4" stroke-width="9" stroke-linecap="round" opacity="0.35"/>
+        <path d="M496.5,426.5 C524.5,434.5 547.0,455.8 559.5,487.0 C572.0,515.8 599.5,530.8 630.8,537.0 C655.8,540.8 672.0,545.8 677.1,550.3"
+          fill="none" stroke="#4a92c4" stroke-width="1.3" opacity="0.7"/>
+        <text x="590" y="500" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="var(--ink-soft)" opacity="0.8" transform="rotate(12 590 500)">Donaukanal</text>
+
+        <!-- The real 1706 Linienwall: full 22-segment survey chain, drawn open (its two ends
+             terminate at the canal rather than closing a ring) -->
+        <path d="M496.5,426.6 L498.1,424.1 L499.2,424.3 L501.4,417.7 L500.3,417.3 L499.4,415.6 L501.1,414.4 L502.3,414.5 L504.5,408.2 L503.5,407.4 L503.5,406.6 L503.5,406.6 L503.4,404.8 L506.8,404.4 L507.5,405.2 L510.2,403.7 L511.1,403.1 L513.4,401.9 L513.0,400.9 L513.6,398.8 L516.0,399.1 L516.5,399.9 L522.9,396.5 L522.4,395.7 L523.4,393.7 L525.7,393.8 L526.4,394.7 L532.0,391.7 L526.7,383.5 L525.7,386.8 L526.7,387.2 L526.2,389.0 L524.7,389.8 L522.9,389.3 L523.1,388.1 L518.2,386.8 L516.6,391.2 L517.6,391.4 L517.0,393.8 L515.2,394.6 L513.3,393.7 L513.5,392.9 L509.3,391.8 L506.3,395.4 L507.2,395.6 L505.8,397.6 L505.3,397.8 L504.5,397.7 L503.9,397.7 L502.5,396.6 L503.0,395.9 L499.1,393.2 L495.4,395.7 L495.9,396.4 L494.1,397.8 L492.6,397.7 L491.3,396.0 L492.0,395.4 L489.1,391.8 L485.3,394.5 L485.8,395.1 L484.2,396.4 L482.5,396.4 L481.1,394.4 L481.8,393.9 L479.1,390.3 L477.3,392.5 L478.6,393.0 L478.3,394.5 L473.2,398.8 L471.5,397.9 L471.6,395.2 L466.7,390.6 L464.1,393.5 L458.8,391.4 L452.8,393.1 L450.4,387.8 L448.8,387.8 L448.6,384.0 L444.4,386.6 L444.9,386.8 L444.6,387.3 L444.1,387.2 L443.5,387.3 L443.2,387.3 L443.2,387.3 L442.6,386.8 L443.1,386.4 L440.1,384.7 L440.0,386.0 L440.0,386.0 L439.8,388.7 L436.8,389.1 L437.7,391.8 L434.6,393.6 L436.0,400.0 L432.7,401.3 L434.9,404.2 L430.8,408.7 L433.0,411.3 L429.9,416.6 L432.7,418.2 L432.0,419.9 L431.4,421.2 L429.3,421.1 L428.9,422.7 L425.3,422.8 L426.1,424.4 L426.3,425.2 L427.4,427.3 L424.0,429.1 L422.4,432.8 L418.5,431.9 L417.1,435.1 L415.3,437.5 L411.8,436.6 L410.0,439.4 L404.2,438.2 L405.5,442.0 L402.1,443.6 L404.1,446.4 L400.9,449.2 L404.7,450.7 L403.6,454.6 L407.7,455.5 L407.0,462.4 L407.1,465.5 L407.2,465.8 L407.2,466.2 L407.2,466.6 L407.2,467.3 L404.1,467.6 L402.3,470.9 L399.8,469.9 L400.1,473.1 L400.1,473.8 L400.2,476.4 L397.5,476.7 L397.2,481.5 L394.6,481.9 L393.8,486.5 L390.1,486.1 L391.5,490.1 L389.0,491.2 L390.6,493.2 L387.4,496.7 L390.2,499.2 L388.2,501.7 L387.8,502.3 L386.0,504.5 L386.9,511.5 L383.7,513.3 L386.8,515.6 L384.6,522.1 L387.2,528.3 L384.0,531.0 L387.3,533.1 L383.6,540.1 L386.1,547.4 L383.5,550.2 L387.1,551.6 L387.0,559.2 L390.1,566.5 L387.1,568.2 L390.2,570.7 L387.2,577.2 L390.1,579.6 L392.1,579.3 L392.3,580.0 L392.4,580.7 L392.4,581.6 L390.9,582.2 L389.4,586.3 L389.4,593.9 L385.7,595.7 L386.9,599.6 L381.9,604.3 L383.9,609.8 L380.3,611.9 L382.3,614.5 L380.9,616.9 L381.3,617.4 L383.5,618.2 L384.2,620.8 L388.4,618.4 L391.9,620.5 L396.2,617.0 L400.1,620.2 L402.1,616.0 L406.7,617.9 L408.5,625.1 L405.2,626.5 L405.9,627.2 L406.2,627.6 L407.4,628.6 L405.7,631.5 L408.8,637.0 L405.8,639.3 L412.1,643.3 L411.1,647.1 L415.0,648.3 L414.9,655.8 L421.5,657.1 L422.1,660.8 L425.7,658.9 L429.4,664.4 L437.0,664.5 L437.6,668.2 L440.8,667.0 L445.5,671.3 L451.2,667.0 L456.1,668.6 L457.4,664.0 L460.4,663.6 L461.3,663.4 L464.5,663.0 L467.1,659.3 L467.3,657.1 L469.3,656.3 L471.1,657.5 L475.7,658.6 L475.9,654.9 L482.6,654.4 L486.8,648.8 L490.4,650.1 L490.5,646.2 L497.2,645.8 L501.8,639.9 L504.4,641.0 L504.5,637.1 L509.5,635.6 L512.2,633.3 L512.7,631.6 L513.6,631.5 L514.4,631.5 L515.1,631.5 L515.7,633.0 L518.6,634.6 L521.2,630.0 L524.9,631.3 L525.6,627.5 L531.2,627.6 L531.2,623.8 L543.0,622.7 L543.3,625.5 L549.9,623.9 L551.5,626.2 L553.3,624.0 L558.8,627.4 L564.9,624.9 L568.8,629.7 L575.6,628.3 L576.8,630.5 L578.3,628.5 L585.2,630.4 L585.5,632.3 L588.3,631.5 L592.3,636.9 L598.8,637.8 L599.8,640.4 L601.1,639.4 L608.3,642.4 L608.9,638.3 L610.7,637.8 L609.8,635.8 L614.4,629.0 L616.9,629.7 L617.8,627.7 L618.6,626.4 L619.6,624.4 L622.4,624.8 L622.3,621.7 L626.5,619.3 L622.2,615.2 L624.6,610.1 L626.5,609.7 L626.1,607.4 L632.9,604.2 L640.4,583.2 L644.6,578.4 L655.3,574.8 L658.4,569.9 L662.6,571.3 L662.6,566.7 L666.5,564.7 L663.7,561.9 L666.7,558.3 L668.5,557.9 L670.7,559.4 L671.6,558.1 L671.2,556.6 L675.7,553.3 L678.3,553.1 L677.1,552.0 L677.2,550.3"
+          fill="none" stroke="#5a4a30" stroke-width="2.2" opacity="0.88"/>
+
+        <!-- Old city: smooth curve through four real Ringstrasse points -->
+        <path d="M507.60,467.15 C520.67,464.31 547.08,497.31 545.35,510.35 C543.62,523.39 510.27,542.56 497.20,545.40 C484.13,548.24 465.22,540.44 466.95,527.40 C468.68,514.36 494.53,469.99 507.60,467.15 Z"
+          fill="var(--parchment)" stroke="#8a6a2c" stroke-width="3" opacity="0.95"/>
+
+        <!-- Stephansdom reference point -->
+        <circle cx="512" cy="512" r="3" fill="#5a4a30"/>
+        <text x="512" y="500" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="var(--ink-soft)">Stephansdom</text>
+
+        <!-- Matzleinsdorfer Linie, one of the nine real toll gates -->
+        <circle cx="460.9" cy="669.9" r="4" fill="var(--accent)"/>
+        <text x="460.9" y="686" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="var(--ink-soft)">Matzleinsdorfer Linie</text>
+
+        <!-- Leopoldstadt: island between the canal and the Danube. No wall geometry for it in this
+             source's fortification layers -- marked as a gap, not drawn as a guess. -->
+        <ellipse cx="582.0" cy="459.1" rx="26" ry="18" fill="none" stroke="var(--ink-soft)" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.5"/>
+        <text x="582.0" y="435" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="var(--ink-soft)" opacity="0.85">Leopoldstadt</text>
+        <text x="582.0" y="487" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="var(--ink-soft)" opacity="0.75">(island — no wall traced here)</text>
+
+        <!-- Landmark markers: positions below are still the OLD invented star-wall's gate points,
+             now stale against the real wall shape above -- pending redecision on where each
+             legation would actually sit relative to the real geography. -->
         <g id="landmarks"></g>
       </svg>
     </div>
     <div style="display:flex; flex-direction:column; gap:1rem;">
       <div class="panel"><h2>Legend</h2><div id="legend"></div></div>
       <div class="panel"><h2>Selected</h2><div id="info"><span class="placeholder">Click a landmark.</span></div></div>
+      <div class="panel">
+        <h2>The Linienwall — real scale</h2>
+        <svg viewBox="0 0 300 260" width="100%" height="auto" role="img" aria-label="The small 1705 inner city walls shown inside the much larger real Linienwall boundary, with the Danube and a named toll gate">
+          <!-- Main Danube channel, running past to the NE, further from the old city -->
+          <path d="M250,-10 L300,15 L300,110 L265,260 L240,253 L272,105 L225,15 Z" fill="#5ba3d0" opacity="0.35"/>
+          <text x="270" y="45" text-anchor="middle" font-family="Georgia, serif" font-size="8.5" fill="var(--ink-soft)" opacity="0.9" transform="rotate(66 270 45)">Donau</text>
+
+          <!-- Danube Canal: the real distributary the wall's two open ends both terminate against,
+               connecting them along the old city's east flank -->
+          <path d="M117.6,41.6 C140,48 158,65 168,90 C178,113 200,125 225,130 C245,133 258,137 262.1,140.6"
+            fill="none" stroke="#4a92c4" stroke-width="7" stroke-linecap="round" opacity="0.4"/>
+          <path d="M117.6,41.6 C140,48 158,65 168,90 C178,113 200,125 225,130 C245,133 258,137 262.1,140.6"
+            fill="none" stroke="#4a92c4" stroke-width="1" opacity="0.7"/>
+          <text x="205" y="123" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="var(--ink-soft)" opacity="0.9" transform="rotate(12 205 123)">Donaukanal</text>
+
+          <!-- Outer Linienwall boundary: the ACTUAL 1706 survey, not an approximation of any kind.
+               Digitized by Maximilian Kaiser (m-kaiser/Vienna-1700 on GitHub) from the real Marinoniplan
+               (1706) -- the historical map literally titled "...mit dem Linienwall" -- reprojected here
+               from its real lat/long into the same Stephansdom-centered system as everything else on this
+               page. It's drawn as an open arc, not a closed ring, because that's what the real data shows:
+               the wall never closed the loop on its own -- the Danube and its Canal did that job on the
+               remaining side, which is why the arc's two ends both terminate near water. Corrected
+               2026-08-22: an earlier pass here only chained 15 of the 22 valid real segments (discarding
+               the rest for gaps that were merely a bit larger, not actually breaks in the wall), which
+               made the real survey look incomplete. This is the full 22-segment chain. -->
+          <path d="M117.6,41.6 L118.9,39.7 L119.7,39.9 L121.5,34.6 L120.6,34.2 L119.9,32.9 L121.3,31.9 L122.2,32.0 L124.0,27.0 L123.2,26.3 L123.2,25.6 L123.2,25.6 L123.1,24.2 L125.8,23.9 L126.4,24.5 L128.5,23.4 L129.3,22.8 L131.1,21.9 L130.8,21.1 L131.3,19.4 L133.2,19.7 L133.6,20.3 L138.7,17.6 L138.4,16.9 L139.1,15.4 L140.9,15.4 L141.5,16.2 L146.0,13.8 L141.8,7.2 L141.0,9.9 L141.8,10.2 L141.3,11.6 L140.2,12.3 L138.7,11.8 L138.9,10.9 L134.9,9.8 L133.7,13.4 L134.5,13.6 L134.0,15.4 L132.6,16.1 L131.0,15.4 L131.2,14.7 L127.9,13.9 L125.4,16.7 L126.2,16.9 L125.0,18.5 L124.6,18.7 L124.0,18.5 L123.5,18.6 L122.4,17.7 L122.8,17.1 L119.7,15.0 L116.7,17.0 L117.1,17.5 L115.7,18.6 L114.5,18.5 L113.5,17.2 L114.0,16.8 L111.7,13.9 L108.6,16.0 L109.0,16.5 L107.7,17.5 L106.4,17.5 L105.3,15.9 L105.8,15.5 L103.7,12.6 L102.3,14.4 L103.3,14.8 L103.0,16.0 L99.0,19.4 L97.6,18.7 L97.6,16.6 L93.7,12.9 L91.7,15.2 L87.5,13.5 L82.6,14.8 L80.7,10.6 L79.4,10.6 L79.3,7.6 L75.9,9.7 L76.3,9.8 L76.1,10.2 L75.7,10.2 L75.2,10.2 L74.9,10.3 L74.9,10.3 L74.5,9.8 L74.9,9.5 L72.5,8.2 L72.4,9.2 L72.4,9.2 L72.2,11.4 L69.8,11.6 L70.6,13.9 L68.1,15.3 L69.2,20.4 L66.6,21.4 L68.3,23.8 L65.0,27.3 L66.8,29.4 L64.3,33.7 L66.5,35.0 L66.0,36.3 L65.5,37.4 L63.8,37.3 L63.6,38.6 L60.6,38.6 L61.2,39.9 L61.5,40.6 L62.3,42.2 L59.6,43.6 L58.3,46.7 L55.2,45.9 L54.1,48.5 L52.6,50.4 L49.8,49.7 L48.4,51.9 L43.7,50.9 L44.8,54.0 L42.1,55.3 L43.7,57.6 L41.2,59.8 L44.2,61.0 L43.3,64.1 L46.6,64.8 L46.0,70.3 L46.0,72.8 L46.1,73.0 L46.1,73.3 L46.2,73.7 L46.2,74.2 L43.7,74.5 L42.2,77.1 L40.3,76.3 L40.5,78.9 L40.5,79.5 L40.6,81.5 L38.4,81.8 L38.2,85.6 L36.1,85.9 L35.4,89.6 L32.5,89.3 L33.6,92.5 L31.6,93.4 L32.9,94.9 L30.3,97.8 L32.6,99.8 L31.0,101.7 L30.6,102.2 L29.2,104.0 L29.9,109.6 L27.4,111.0 L29.9,112.9 L28.1,118.1 L30.2,123.0 L27.6,125.2 L30.2,126.8 L27.3,132.5 L29.3,138.4 L27.2,140.5 L30.1,141.6 L30.0,147.7 L32.5,153.6 L30.1,154.9 L32.5,157.0 L30.2,162.2 L32.5,164.1 L34.1,163.9 L34.3,164.4 L34.3,164.9 L34.3,165.7 L33.1,166.2 L31.9,169.4 L31.9,175.5 L29.0,177.0 L29.9,180.1 L25.9,183.8 L27.5,188.2 L24.7,189.9 L26.2,192.0 L25.1,193.9 L25.4,194.3 L27.2,194.9 L27.7,197.0 L31.1,195.1 L33.9,196.8 L37.4,194.0 L40.5,196.5 L42.1,193.2 L45.8,194.7 L47.2,200.5 L44.6,201.6 L45.1,202.1 L45.4,202.4 L46.3,203.3 L45.0,205.6 L47.4,210.0 L45.0,211.8 L50.0,215.0 L49.3,218.0 L52.4,219.0 L52.4,225.0 L57.6,226.1 L58.1,229.0 L60.9,227.5 L63.9,231.9 L70.0,232.0 L70.5,234.9 L73.1,234.0 L76.8,237.5 L81.4,234.0 L85.3,235.3 L86.3,231.6 L88.7,231.3 L89.5,231.1 L92.0,230.8 L94.1,227.8 L94.2,226.1 L95.8,225.5 L97.3,226.4 L100.9,227.3 L101.1,224.3 L106.5,223.9 L109.8,219.4 L112.7,220.5 L112.8,217.4 L118.1,217.0 L121.8,212.3 L123.9,213.2 L124.0,210.1 L128.0,208.8 L130.1,207.0 L130.6,205.7 L131.3,205.6 L131.9,205.6 L132.5,205.6 L133.0,206.8 L135.3,208.1 L137.4,204.4 L140.4,205.4 L140.8,202.4 L145.3,202.5 L145.4,199.4 L154.8,198.6 L155.0,200.8 L160.3,199.6 L161.6,201.4 L163.0,199.6 L167.4,202.3 L172.3,200.3 L175.4,204.2 L180.8,203.0 L181.8,204.8 L183.1,203.2 L188.6,204.8 L188.8,206.3 L191.1,205.6 L194.3,210.0 L199.5,210.6 L200.2,212.7 L201.3,211.9 L207.0,214.3 L207.5,211.0 L208.9,210.7 L208.3,209.0 L211.9,203.6 L213.9,204.2 L214.6,202.6 L215.3,201.5 L216.1,200.0 L218.3,200.2 L218.2,197.8 L221.6,195.8 L218.2,192.6 L220.1,188.4 L221.6,188.2 L221.2,186.3 L226.8,183.8 L232.7,167.0 L236.1,163.1 L244.7,160.2 L247.1,156.3 L250.5,157.4 L250.5,153.8 L253.6,152.2 L251.3,149.9 L253.8,147.0 L255.2,146.7 L257.0,147.9 L257.7,146.8 L257.3,145.7 L261.0,143.1 L263.0,142.9 L262.1,142.0 L262.1,140.6"
+            fill="none" stroke="var(--parchment-line)" stroke-width="1.4" opacity="0.9"/>
+
+          <!-- Old city: same method, smooth curve through four real Ringstrasse points
+               (Schottenring N, Stubenring E, Opernring S, Burgring W) -->
+          <path d="M126.48,74.12 C136.93,71.85 158.07,98.25 156.68,108.68 C155.29,119.11 128.61,134.45 118.16,136.72 C107.71,138.99 92.57,132.75 93.96,122.32 C95.35,111.89 116.03,76.39 126.48,74.12 Z"
+            fill="var(--parchment)" stroke="#8a6a2c" stroke-width="2.5" opacity="0.95"/>
+          <text x="125" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="var(--ink-soft)">old city</text>
+
+          <!-- Stephansdom: the fixed real-world reference point everything above is measured from -->
+          <circle cx="130" cy="110" r="2" fill="#5a4a30"/>
+          <text x="130" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="6.5" fill="var(--ink-soft)">Stephansdom</text>
+
+          <!-- One of the nine real toll gates, at its real geocoded position -->
+          <circle cx="89.1" cy="236.3" r="3" fill="var(--accent)"/>
+          <text x="89.1" y="250.3" text-anchor="middle" font-family="Georgia, serif" font-size="7.5" fill="var(--ink-soft)">Matzleinsdorfer Linie</text>
+
+          <!-- Leopoldstadt: the island between the Donaukanal and the main Danube. Checked every
+               fortification layer in the same source (linienwall + verteidigungswall) and neither
+               traces a wall out here, even though the water layer confirms the base map covers this
+               area. Likely explanation: as an island already bounded by water on two sides, its real
+               boundary was probably the rivers themselves plus toll checkpoints at the bridges (e.g.
+               Taborbrücke), not an earthwork like the mainland's -- but that's inference, not sourced
+               fact, so this is marked as a gap rather than drawn as a wall. -->
+          <ellipse cx="185.9" cy="67.7" rx="20" ry="14" fill="none" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="3 2" opacity="0.5"/>
+          <text x="185.9" y="49" text-anchor="middle" font-family="Georgia, serif" font-size="6.5" fill="var(--ink-soft)" opacity="0.85">Leopoldstadt</text>
+          <text x="185.9" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="5.5" fill="var(--ink-soft)" opacity="0.75">(island — no wall traced here)</text>
+
+          <text x="150" y="12" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="var(--ink-soft)">Linienwall, 1704</text>
+        </svg>
+        <div style="font-size:0.8rem; line-height:1.6; color:var(--ink-soft); margin-top:0.5rem;">
+          The Linienwall line above is no longer an approximation of any kind — it's the actual 1706 survey,
+          digitized by researcher Maximilian Kaiser (<a href="https://github.com/m-kaiser/Vienna-1700">m-kaiser/Vienna-1700</a>
+          on GitHub) from the real <em>Marinoniplan</em>, a historical map literally titled "...mit dem Linienwall,"
+          held by the Wien Museum. All 22 of its valid digitized segments (two tiny fragments far to the north sit
+          outside the wall's real bounding box and were excluded) chain into one real, continuous, genuinely jagged
+          arc spanning the full historical extent; reprojected here from real lat/long into the same coordinate
+          system as everything else on this page. An earlier version of this panel only used 15 of those 22
+          segments and looked visibly incomplete as a result — that was an error in the reconstruction, not a gap
+          in the survey; this is the corrected full chain. It's drawn open, not closed, because the real data
+          doesn't close either — the wall's two ends both terminate near the Danube Canal (one close to the old
+          city, the other out near Sankt Marx), which finished the enclosure on that side rather than more
+          rampart. The old city star (still a smoothed approximation through four Ringstrasse points, not this
+          same treatment yet) sits inside it. Built in just four months in <strong>1704</strong>, one year before
+          the Yawning, on the order of Emperor <strong>Leopold I</strong> (Josef's own father). Traffic passed
+          through <strong>nine real toll gates</strong> (each charging the <em>Liniengeld</em>) —
+          <strong>Matzleinsdorfer Linie</strong> is the one with the best-documented archival record.
+          This is the real boundary Sühnestadt's exile line is drawn against. Note the dashed circle
+          near the top: that's <strong>Leopoldstadt</strong>, the island between the Danube Canal and
+          the main Danube. It was administratively part of the same Linien toll system, but no wall
+          geometry for it turned up in this source's fortification layers even though the source map
+          covers that ground — most likely because, as an island, its boundary was the rivers themselves
+          plus toll checkpoints at the bridges rather than a built rampart. Marked here as an honest gap,
+          not drawn as a guess.
+        </div>
+      </div>
     </div>
   </div>
   <footer>
-    Fortress geometry reused from Thaer's existing site motif (itself traced from a real historical Vienna fortification
-    plan). The four legations and Wardenhall are new invented flavor as of 2026-08-10 — not sourced from any GPT log,
-    not yet reviewed as canon. The Hofburg Palace marker, added 2026-08-13, is different: Franz Joseph is real sourced
+    Fortress geometry replaced 2026-08-22, twice: first with a curve through four real geocoded points (Opernring,
+    Schottenring, Burgring, Stubenring — the modern streets built on the historical inner wall line), sourced from
+    OpenStreetMap/Nominatim; then later the same day with the actual 1706 Linienwall survey itself (see the sidebar
+    panel's own credit line), ported into the main map so both views now share one Stephansdom-centered coordinate
+    system built entirely on real data, not invention. The four legations and Wardenhall are still new invented
+    flavor as of 2026-08-10 — not sourced from any GPT log, not yet reviewed as canon — and their marker positions
+    below are current stale leftovers from the old star shape's gate points, not yet redecided against the real
+    wall. The Hofburg Palace marker, added 2026-08-13, is different: Franz Joseph is real sourced
     material — see his <a href="Figures/franz-joseph.html">dedicated page</a> for the full biography, the 1705 origin
     of his excommunication, and how his residency reconciles with this city's neutrality. See
     <a href="thaer.html">Thaer — worldbuilding reference</a> for the Post-Yawning empires this page assumes.
+    The Linienwall panel, added 2026-08-22, is real historical fact, not stylized invention — see
+    <a href="https://en.wikipedia.org/wiki/Linienwall">Linienwall</a> and
+    <a href="https://en.wikipedia.org/wiki/G%C3%BCrtel,_Vienna">Gürtel, Vienna</a> on Wikipedia. Its enclosed area is
+    an estimate from the wall's known 13.5km length treated as a rough circle, not a sourced figure itself.
   </footer>
 </div>
 <script>
@@ -131,18 +255,18 @@
     { x: 512, y: 512, r: 12, color: "#c9a94a", name: "Wardenhall",
       tag: "Aegis of Equilibrium — regional headquarters",
       note: "Sits at the exact center of the neutral city, equidistant from all four legations by design. Doubles as an artifact vault, per the Aegis's usual practice — the political neutrality of the ground it stands on is presumably part of why this particular chapter is based here." },
-    { x: 512, y: 320, r: 10, color: "#2c4a68", name: "The Protestant Legation",
+    { x: 495, y: 337, r: 10, color: "#2c4a68", name: "The Protestant Legation",
       tag: "Protestant Confederacy — diplomatic mission",
-      note: "North gate, facing the Confederacy's Northern European heartland. A legation rather than an embassy in the Catholic/Orthodox sense — reflecting the Confederacy's own looser, non-hierarchical structure (see the Protestant Confederacy page)." },
-    { x: 704, y: 512, r: 10, color: "#66023C", name: "The Orthodox Legation",
+      note: "North gate (repositioned 2026-08-22 to the real Schottenring point, once the wall shape itself was redrawn from real geocoded data), facing the Confederacy's Northern European heartland. A legation rather than an embassy in the Catholic/Orthodox sense — reflecting the Confederacy's own looser, non-hierarchical structure (see the Protestant Confederacy page)." },
+    { x: 642, y: 506, r: 10, color: "#66023C", name: "The Orthodox Legation",
       tag: "Orthodox Empire — diplomatic mission",
-      note: "East gate, facing Muscovy and the Balkans/Caucasus. Which of the Empire's two real centers of gravity — Constantinople or Moscow — actually staffs this legation is an open question (see the Orthodox Empire page's Greek/Russian tension note)." },
-    { x: 512, y: 704, r: 10, color: "#206b48", name: "The Caliphate Legation",
+      note: "East gate (repositioned 2026-08-22 to the real Stubenring point), facing Muscovy and the Balkans/Caucasus. Which of the Empire's two real centers of gravity — Constantinople or Moscow — actually staffs this legation is an open question (see the Orthodox Empire page's Greek/Russian tension note)." },
+    { x: 454, y: 642, r: 10, color: "#206b48", name: "The Caliphate Legation",
       tag: "Sunni Caliphate — diplomatic mission",
-      note: "South gate, facing the Ottoman-adjacent Caliphate heartland. Whether this legation represents a single unified Caliphate or specifically the Sunni half of a still-unresolved Sunni/Shia question is genuinely undecided (see the Sunni Caliphate page)." },
-    { x: 320, y: 512, r: 10, color: "#FCD116", name: "The Catholic Legation",
+      note: "South gate (repositioned 2026-08-22 to the real Opernring point), facing the Ottoman-adjacent Caliphate heartland. Whether this legation represents a single unified Caliphate or specifically the Sunni half of a still-unresolved Sunni/Shia question is genuinely undecided (see the Sunni Caliphate page)." },
+    { x: 336, y: 572, r: 10, color: "#FCD116", name: "The Catholic Legation",
       tag: "Catholic Union — diplomatic mission",
-      note: "West gate, facing Rome and the Catholic heartland of Western/Central Europe. Given the Papal State's own military structure (see War-Papa, on Gift I's page), this is presumably the best-defended of the four legations, even on strictly neutral ground." },
+      note: "West gate (repositioned 2026-08-22 to the real Burgring point), facing Rome and the Catholic heartland of Western/Central Europe. Given the Papal State's own military structure (see War-Papa, on Gift I's page), this is presumably the best-defended of the four legations, even on strictly neutral ground." },
     { x: 445, y: 512, r: 9, color: "#6b7280", name: "The Hofburg Palace",
       tag: "Franz Joseph, Demiduke of Vienna — real sourced material",
       note: "Home to Franz Joseph, current holder of the excommunicated Demiduke line, exiled to a 9-mile radius centered on this exact palace since 1705. Not a Catholic Union claim on the city despite his cultural ties — he's personally excommunicated, and his title carries no territory beyond this exile zone. Full biography: see the Franz Joseph page." }
